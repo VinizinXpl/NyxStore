@@ -5,52 +5,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyx Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Style/style.css">
 </head>
 
 <body>
 
     <header>
-        <div class="Nyx">
-            <h1>Nyx Store</h1>
-        </div>
-        <div>
-            <h2>Bem-vindo(a) à Nyx Store</h2>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="main.html">Ínicio</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="funções.html">Funções</a></li>
-                <li><a href="compras.html">Como adquirir</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-
-            </ul>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../img/PSX_20250803_013208.png" alt="Nyx Store Logo" class="logo-img">
+                    Nyx Store
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="main.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="functions.html">Funções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="HowToBuy.html">Como adquirir</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
+
     <main>
 
-        <section class="menu-blocos">
-            <div class="bloco">
-                <h3>Valores</h3>
-                <p>Aqui você poderá ver os valores dos nossos produtos.</p>
+        <section id="Inicio" class="section hero">
+            <div class="container hero-content">
+                <h2 class="hero-title">Bem-vindo à Nyx Store</h2>
+                <p class="hero-sub-description">Explore meus produtos e não hesite em entrar em contato comigo se
+                    precisar de ajuda!</p>
+                <div class="card-grid values-grid">
+                    <div class="card value-box">
+                        <h3>Produtos</h3>
+                        <p>Interessado nos produtos disponíveis?</p>
+                    </div>
+                    <div class="card value-box">
+                        <h3>Funções</h3>
+                        <p>Dê uma espiada em todas as funções disponíveis.</p>
+                    </div>
+                    <div class="card value-box">
+                        <h3>Como comprar</h3>
+                        <p>Saiba como adquirir nossos produtos de forma simples e rápida.</p>
+                    </div>
+                    <div class="card value-box">
+                        <h3>FAQ</h3>
+                        <p>Respostas para as perguntas mais frequentes.</p>
+                    </div>
+                </div>
             </div>
-            <div class="bloco">
-                <h3>Lista de funções</h3>
-                <p>Dê uma espiada em todas as funções disponiveis</p>
-            </div>
-            <div class="bloco">
-                <h3>Como comprar</h3>
-                <p>Saiba como adquirir nossos produtos de forma simples e rápida.</p>
-            </div>
-            <div class="bloco">
-                <h3>FAQ</h3>
-                <p>Respostas para as perguntas mais frequentes.</p>
-            </div>
+            
 
         </section>
 
+        <section class="card-section">
+            <div class="card" style="width: 18rem;">
+                <img src="../img/Unicore.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Unicore</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+             <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </section>
+        
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
