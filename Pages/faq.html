@@ -6,29 +6,32 @@
     <title>Nyx Store - FAQ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../Style/style.css">
- <header>
+</head>
+
+<body>
+    <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" >Nyx Store</a>
+                <a class="navbar-brand" href="#">
+                    <img src="../img/PSX_20250803_013208.png" alt="Nyx Store Logo" class="logo-img">
+                    Nyx Store
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="main.html">Inicio</a>
+                            <a class="nav-link" href="main.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="products.html">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="functions.html">Funções</a>
+                            <a class="nav-link" href="buy.html">Como adquirir</a>
                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link" href="HowToBuy.html">Como adquirir</a>
-                        </li>
-                         <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="faq.html">FAQ</a>
                         </li>
                     </ul>
@@ -37,22 +40,134 @@
         </nav>
     </header>
     <main>
-        <section class="faq">
-            <h2>Perguntas Frequentes (FAQ)</h2>
-            
-            <div class="pergunta">
-                <h3>Como recebo o produto após a compra?</h3>
-                <p>Após a confirmação do pagamento, enviaremos sua chave de acesso e um tutorial completo de instalação diretamente para você via Discord.</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">FAQ</h1>
+                <p class="hero-sub-description">Perguntas Frequentes - Tire suas dúvidas</p>
             </div>
+        </section>
 
-            <div class="pergunta">
-                <h3>Como obtenho suporte se precisar de ajuda?</h3>
-                <p>Para suporte, por favor, entre no nosso servidor do Discord e procure os canais de ajuda apropriados ou me contate diretamente via DM (nyxzzin).</p>
+        <!-- FAQ Section -->
+        <section class="container mt-2">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <!-- Pergunta 1 -->
+                    <div class="card faq-card mb-4">
+                        <div class="card-body">
+                            <div class="faq-question">
+                                <h4>💼 Como recebo o produto após a compra?</h4>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Após a confirmação do pagamento, você receberá:</p>
+                                <ul>
+                                    <li>Sua chave de acesso exclusiva</li>
+                                    <li>Tutorial completo de instalação</li>
+                                    <li>Suporte direto via Discord</li>
+                                </ul>
+                                <p>Todo o processo é enviado diretamente para você via Discord em poucos minutos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 2 -->
+                    <div class="card faq-card mb-4">
+                        <div class="card-body">
+                            <div class="faq-question">
+                                <h4>🛠️ Como obtenho suporte se precisar de ajuda?</h4>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Oferecemos suporte completo através do Discord:</p>
+                                <ul>
+                                    <li><strong>Canais de ajuda</strong> no servidor da comunidade</li>
+                                    <li><strong>Contato direto</strong> via DM: <code>nyxzzin</code></li>
+                                    <li><strong>Suporte 24/7</strong> para questões urgentes</li>
+                                </ul>
+                                <p>Nossa equipe está sempre pronta para ajudar com qualquer dúvida ou problema.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 3 -->
+                    <div class="card faq-card mb-4">
+                        <div class="card-body">
+                            <div class="faq-question">
+                                <h4>⚠️ Posso ser banido?</h4>
+                            </div>
+                            <div class="faq-answer">
+                                <p><strong>Importante:</strong> Sim, existe risco de banimento ao usar qualquer software de modificação.</p>
+                                <div class="warning-box">
+                                    <h6>⚡ Nossos sistemas de proteção:</h6>
+                                    <ul>
+                                        <li>Proteção avançada anti-detecção</li>
+                                        <li>Atualizações constantes de segurança</li>
+                                        <li>Risco baixo, mas não nulo</li>
+                                    </ul>
+                                </div>
+                                <p><em>Use sempre por sua conta e risco. Recomendamos prudência e responsabilidade.</em></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 4 -->
+                    <div class="card faq-card mb-4">
+                        <div class="card-body">
+                            <div class="faq-question">
+                                <h4>🔄 Os produtos recebem atualizações?</h4>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sim! Todos os nossos produtos são constantemente atualizados:</p>
+                                <ul>
+                                    <li><strong>Unicore:</strong> Atualizações automáticas</li>
+                                    <li><strong>KittenWave:</strong> Sem necessidade de reload</li>
+                                    <li>Compatibilidade com novas versões dos jogos</li>
+                                    <li>Melhorias de performance e segurança</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 5 -->
+                    <div class="card faq-card mb-4">
+                        <div class="card-body">
+                            <div class="faq-question">
+                                <h4>💳 Quais formas de pagamento aceitas?</h4>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Aceitamos as seguintes formas de pagamento:</p>
+                                <div class="payment-options">
+                                    <div class="payment-option">
+                                        <span class="payment-icon">📱</span>
+                                        <strong>PIX</strong> - Pagamento instantâneo
+                                    </div>
+                                    <div class="payment-option">
+                                        <span class="payment-icon">₿</span>
+                                        <strong>Crypto (USDT)</strong> - Criptomoedas
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-            <div class="pergunta">
-                <h3>Posso ser banido?</h3>
-                <p>Sim, lembre-se que você está usando um software para burlar o sistema do jogo, sempre terá risco, mesmo que seja baixo, mesmo que seja difícil de acontecer! Use por sua conta e risco.</p>
+        <!-- Contact Section -->
+        <section class="container mt-4 mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card contact-faq-card">
+                        <div class="card-body text-center">
+                            <h4>❓ Não encontrou sua resposta?</h4>
+                            <p>Entre em contato conosco diretamente no Discord</p>
+                            <a href="https://discord.gg/6uwa7Q5rma" class="btn btn-primary discord-btn">
+                                Falar no Discord
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

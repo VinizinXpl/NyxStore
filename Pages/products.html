@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyx Store</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../Style/style.css">
 </head>
+
 <body>
- <header>
+    <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" >Nyx Store</a>
+                <a class="navbar-brand" href="#">
+                    <img src="../img/PSX_20250803_013208.png" alt="Nyx Store Logo" class="logo-img">
+                    Nyx Store
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="main.html">Inicio</a>
+                            <a class="nav-link" href="main.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="products.html">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="functions.html">Funções</a>
+                            <a class="nav-link" href="buy.html">Como adquirir</a>
                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link" href="HowToBuy.html">Como adquirir</a>
-                        </li>
-                         <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="faq.html">FAQ</a>
                         </li>
                     </ul>
@@ -38,18 +41,49 @@
             </div>
         </nav>
     </header>
-
     <main>
-        <section class="produtos">
-            <h2>Nossos Produtos e valores</h2>
-            <div class="produto">
-                <h5>Genshin Impact</h5>
-                <h3>Unicore</h3>
-                <p>2 dias: R$ 15,50</p>
-                <p>7 dias: R$ 36,90</p>
-                <p>30 dias: R$ 82,90</p>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Nossos Produtos</h1>
+                <p class="hero-sub-description">Soluções completas para seus jogos favoritos</p>
             </div>
+        </section>
+
+        <section class="container mt-2">
+            <div class="row">
+                <!-- Unicore - Genshin Impact -->
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3>Unicore - Genshin Impact</h3>
+                            <div class="pricing-plans">
+                                <p>2 dias: <strong>R$ 15,50</strong></p>
+                                <p>7 dias: <strong>R$ 36,90</strong></p>
+                                <p>30 dias: <strong>R$ 82,90</strong></p>
+                            </div>
+                            <a href="unicore.html" class="btn btn-primary">Ver Detalhes e Funções</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KittenWave - Wuthering Waves -->
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3>KittenWave - Wuthering Waves</h3>
+                            <div class="pricing-plans">
+                                <p>Licença Vitalícia: <strong>R$ 140,00</strong></p>
+                                <p class="text-muted">Pagamento único - Use para sempre</p>
+                            </div>
+                            <a href="kittenwave.html" class="btn btn-primary">Ver Detalhes e Funções</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
         </section>
     </main>
 </body>
+
 </html>
