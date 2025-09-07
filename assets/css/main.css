@@ -1,0 +1,113 @@
+/* ============================================================================
+   NYX STORE - MAIN STYLESHEET
+   ============================================================================ */
+
+/* Import Bootstrap 5.3 Components (loaded via CDN in HTML) */
+
+/* Utils - Base configurations */
+@import url('./utils/variables.css');
+@import url('./utils/globals.css');
+
+/* Components - Reusable UI components */
+@import url('./components/navbar.css');
+@import url('./components/buttons.css');
+@import url('./components/cards.css');
+@import url('./components/forms.css');
+@import url('./components/footer.css');
+@import url('./components/hero.css');
+
+/* Utils - Responsive and utilities */
+@import url('./utils/responsive.css');
+
+/* ============================================================================
+   ACCESSIBILITY & FOCUS STATES
+   ============================================================================ */
+
+/* Focus Styles for Better Accessibility */
+.btn:focus,
+.form-control:focus,
+.nav-link:focus,
+.card:focus {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+}
+
+/* Reduced Motion for Users Who Prefer It */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================================================
+   PRINT STYLES
+   ============================================================================ */
+
+@media print {
+    .navbar,
+    .btn,
+    footer,
+    .hero::before {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .card {
+        border: 1px solid #000 !important;
+        background: white !important;
+    }
+    
+    .text-gradient {
+        -webkit-text-fill-color: unset !important;
+        background: none !important;
+        color: black !important;
+    }
+}
+
+/* ============================================================================
+   DARK THEME ENFORCEMENTS
+   ============================================================================ */
+
+/* Ensure dark theme consistency */
+[data-bs-theme="dark"] .table {
+    --bs-table-bg: transparent;
+    --bs-table-border-color: rgba(75, 85, 99, 0.3);
+}
+
+[data-bs-theme="dark"] .badge {
+    --bs-badge-color: #fff;
+}
+
+[data-bs-theme="dark"] .alert {
+    --bs-alert-border: 0;
+}
+
+/* ============================================================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================================================ */
+
+/* GPU Acceleration for Smooth Animations */
+.card,
+.btn,
+.navbar,
+.hero {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Optimize font loading */
+.text-gradient,
+.hero-title,
+.navbar-brand {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

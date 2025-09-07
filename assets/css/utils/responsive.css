@@ -1,0 +1,231 @@
+/* ============================================================================
+   RESPONSIVE DESIGN - Media Queries and Responsive Utilities
+   ============================================================================ */
+
+/* Mobile First Breakpoints */
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+    .container {
+        padding: 0 var(--space-md);
+    }
+    
+    .display-4 {
+        font-size: 1.75rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .navbar .input-group {
+        width: 100% !important;
+        margin-top: var(--space-md);
+    }
+    
+    .navbar-nav {
+        text-align: center;
+        padding: var(--space-lg) 0;
+    }
+    
+    .card {
+        margin-bottom: var(--space-lg);
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .product-preview .row {
+        align-items: center;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar-nav {
+        padding: var(--space-md) 0;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .hero {
+        min-height: 85vh;
+    }
+    
+    .product-preview img {
+        max-height: 120px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .navbar .input-group {
+        max-width: 300px;
+    }
+    
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+    
+    .product-preview img {
+        max-height: 150px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .hero-description {
+        font-size: 1.375rem;
+    }
+}
+
+/* Utility Classes for Responsive Design */
+.text-responsive {
+    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+}
+
+.title-responsive {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+.subtitle-responsive {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* Responsive Spacing */
+.py-responsive {
+    padding-top: clamp(2rem, 5vw, 4rem);
+    padding-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.my-responsive {
+    margin-top: clamp(1rem, 3vw, 2rem);
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+/* Responsive Grid */
+.grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+}
+
+/* Hide/Show Elements Responsively */
+.mobile-only {
+    display: block;
+}
+
+.desktop-only {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+    
+    .desktop-only {
+        display: block;
+    }
+}
+
+/* Responsive Images */
+.img-responsive {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+/* Responsive Cards */
+@media (max-width: 767.98px) {
+    .card-responsive {
+        margin-bottom: var(--space-xl);
+    }
+    
+    .card-responsive .row {
+        flex-direction: column;
+    }
+    
+    .card-responsive img {
+        margin-bottom: var(--space-lg);
+        max-height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Responsive Tables */
+.table-responsive-custom {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767.98px) {
+    .table-responsive-custom table,
+    .table-responsive-custom thead,
+    .table-responsive-custom tbody,
+    .table-responsive-custom th,
+    .table-responsive-custom td,
+    .table-responsive-custom tr {
+        display: block;
+    }
+    
+    .table-responsive-custom thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .table-responsive-custom tr {
+        border: 1px solid rgba(75, 85, 99, 0.3);
+        margin-bottom: var(--space-md);
+        border-radius: var(--radius-md);
+        padding: var(--space-md);
+    }
+    
+    .table-responsive-custom td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        padding-bottom: var(--space-sm);
+    }
+    
+    .table-responsive-custom td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: var(--font-weight-semibold);
+        color: #9ca3af;
+    }
+}

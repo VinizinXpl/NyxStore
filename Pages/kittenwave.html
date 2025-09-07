@@ -1,87 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyx Store - KittenWave</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Style/style.css">
+    <title>KittenWave - Nyx Store</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
 <body>
-
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="../img/PSX_20250803_013208.png" alt="Nyx Store Logo" class="logo-img">
-                    Nyx Store
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="bi bi-stars text-primary me-2"></i>
+                <span class="text-gradient">Nyx Store</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="main.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="products.html">Produtos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="buy.html">Como adquirir</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.html">FAQ</a>
-                        </li>
-                    </ul>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="bi bi-house me-1"></i>Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">
+                            <i class="bi bi-box me-1"></i>Produtos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buy.html">
+                            <i class="bi bi-cart me-1"></i>Como Comprar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">
+                            <i class="bi bi-question-circle me-1"></i>FAQ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="functions.html">
+                            <i class="bi bi-gear me-1"></i>Funções
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Search and Cart -->
+                <div class="d-flex align-items-center">
+                    <div class="input-group me-3" style="width: 250px;">
+                        <span class="input-group-text bg-dark border-secondary">
+                            <i class="bi bi-search text-muted"></i>
+                        </span>
+                        <input type="search" class="form-control bg-dark border-secondary text-light" 
+                               placeholder="Buscar produtos...">
+                    </div>
+                    <button class="btn btn-outline-primary position-relative me-2">
+                        <i class="bi bi-cart3"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                            0
+                        </span>
+                    </button>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
+    <main class="pt-5 mt-3">
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h1 class="hero-title">KittenWave - Wuthering Waves</h1>
-                <p class="hero-sub-description">A solução definitiva e vitalícia para Wuthering Waves</p>
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="hero-title">KittenWave</h1>
+                        <p class="hero-description">
+                            A solução definitiva e vitalícia para Wuthering Waves. 
+                            Recursos avançados, interface intuitiva e atualizações automáticas.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <span class="badge bg-success fs-6 px-3 py-2">
+                                <i class="bi bi-shield-check me-1"></i>Vitalício
+                            </span>
+                            <span class="badge bg-primary fs-6 px-3 py-2">
+                                <i class="bi bi-rocket me-1"></i>Sem Reload
+                            </span>
+                            <span class="badge bg-info fs-6 px-3 py-2">
+                                <i class="bi bi-globe me-1"></i>Multi-idioma
+                            </span>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="buy.html" class="btn btn-gradient btn-lg">
+                                <i class="bi bi-cart-plus me-2"></i>Comprar Agora
+                            </a>
+                            <a href="#functions" class="btn btn-outline-light btn-lg">
+                                <i class="bi bi-list-check me-2"></i>Ver Funções
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <img src="../img/KittenWaves.png" alt="KittenWave" class="img-fluid rounded-lg shadow-lg">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="container mt-3">
-            <div class="row">
-                <!-- Especificações -->
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h3>Especificações do KittenWave</h3>
-                            <ul>
-                                <li><strong>Jogo:</strong> Wuthering Waves</li>
-                                <li><strong>Sistema:</strong> Windows 10/11 (Linux quase completo)</li>
-                                <li><strong>Licença:</strong> Vitalícia</li>
-                                <li><strong>Atualizações:</strong> Sem necessidade de reload</li>
-                                <li><strong>Suporte:</strong> Multi-idiomas</li>
-                                <li><strong>Interface:</strong> Overlay com hotkeys</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Preço -->
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h3>Plano Vitalício</h3>
-                            <div class="pricing-plans">
-                                <div class="price-item mb-3">
-                                    <h5>Licença Vitalícia</h5>
-                                    <p class="price"><strong>R$ 140,00</strong></p>
-                                    <p class="text-muted">Pagamento único - Use para sempre</p>
+        <!-- Product Info -->
+        <section class="py-5 bg-gradient-dark">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Especificações -->
+                    <div class="col-lg-6">
+                        <div class="card card-hover h-100">
+                            <div class="card-body">
+                                <h3 class="card-title text-gradient mb-4">
+                                    <i class="bi bi-gear-fill me-2"></i>Especificações
+                                </h3>
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-controller text-primary me-2"></i>
+                                            <strong>Jogo:</strong>
+                                        </div>
+                                        <p class="text-muted">Wuthering Waves</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-windows text-primary me-2"></i>
+                                            <strong>Sistema:</strong>
+                                        </div>
+                                        <p class="text-muted">Windows 10/11<br><small>Linux (quase completo)</small></p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-infinity text-primary me-2"></i>
+                                            <strong>Licença:</strong>
+                                        </div>
+                                        <p class="text-muted">Vitalícia</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-arrow-clockwise text-primary me-2"></i>
+                                            <strong>Atualizações:</strong>
+                                        </div>
+                                        <p class="text-muted">Sem necessidade de reload</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-translate text-primary me-2"></i>
+                                            <strong>Idiomas:</strong>
+                                        </div>
+                                        <p class="text-muted">Multi-idiomas</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-layout-wtf text-primary me-2"></i>
+                                            <strong>Interface:</strong>
+                                        </div>
+                                        <p class="text-muted">Overlay com hotkeys</p>
+                                    </div>
                                 </div>
                             </div>
-                            <a href="buy.html" class="btn btn-primary mt-3">Comprar Agora</a>
+                        </div>
+                    </div>
+
+                    <!-- Preço -->
+                    <div class="col-lg-6">
+                        <div class="card card-hover h-100 bg-gradient-primary text-white">
+                            <div class="card-body text-center d-flex flex-column justify-content-center">
+                                <h3 class="card-title mb-4">
+                                    <i class="bi bi-star-fill me-2"></i>Plano Vitalício
+                                </h3>
+                                <div class="mb-4">
+                                    <div class="display-4 fw-bold">R$ 140,00</div>
+                                    <p class="lead opacity-75">Pagamento único - Use para sempre</p>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-center flex-wrap gap-2">
+                                        <span class="badge bg-light text-dark">
+                                            <i class="bi bi-check-circle me-1"></i>Atualizações gratuitas
+                                        </span>
+                                        <span class="badge bg-light text-dark">
+                                            <i class="bi bi-check-circle me-1"></i>Suporte vitalício
+                                        </span>
+                                        <span class="badge bg-light text-dark">
+                                            <i class="bi bi-check-circle me-1"></i>Sem mensalidades
+                                        </span>
+                                    </div>
+                                </div>
+                                <a href="buy.html" class="btn btn-light btn-lg">
+                                    <i class="bi bi-cart-plus me-2"></i>Comprar Agora
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -89,108 +211,149 @@
         </section>
 
         <!-- Funções detalhadas -->
-        <section class="container mt-3">
-            <h2 class="text-center mb-4">Funções Completas</h2>
-            
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5>Player</h5>
-                            <ul>
-                                <li>Godmode</li>
-                                <li>Multihit</li>
-                                <li>No Cooldown</li>
-                                <li>Force Critical</li>
-                                <li>Infinite Stamina</li>
-                                <li>Infinite Forte</li>
-                                <li>Infinite Ultimate Energy</li>
-                                <li>Infinite Concerto Energy</li>
-                                <li>Animation Speed</li>
-                                <li>Max Resonance Chain (R6)</li>
-                                <li>Player buffs (stackable)</li>
-                                <li>+50% Echo Drop Rate</li>
-                                <li>+50% Shell Credits</li>
-                                <li>+50% Material Drops</li>
-                                <li>No Fall</li>
-                                <li>Noclip</li>
-                                <li>Walk Speed</li>
-                                <li>Spider</li>
-                                <li>Enter Restricted Areas</li>
-                            </ul>
+        <section class="py-5" id="functions">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold text-gradient">Funções Completas</h2>
+                    <p class="lead text-muted">Todas as funcionalidades disponíveis no KittenWave</p>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Player -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card card-hover h-100">
+                            <div class="card-body">
+                                <div class="feature-icon text-warning mb-3">
+                                    <i class="bi bi-person-circle"></i>
+                                </div>
+                                <h5 class="card-title text-gradient">Player</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Godmode</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Multihit</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>No Cooldown</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Force Critical</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Infinite Stamina</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Infinite Forte</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Infinite Ultimate Energy</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Infinite Concerto Energy</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Animation Speed</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Max Resonance Chain (R6)</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Player buffs (stackable)</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>+50% Echo Drop Rate</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>+50% Shell Credits</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>+50% Material Drops</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>No Fall</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Noclip</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Walk Speed</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Spider</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Enter Restricted Areas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- World -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card card-hover h-100">
+                            <div class="card-body">
+                                <div class="feature-icon text-success mb-3">
+                                    <i class="bi bi-globe"></i>
+                                </div>
+                                <h5 class="card-title text-gradient">World</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Speedhack</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Killaura</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Entity Vacuum</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Dumb Enemies</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Force Skip Button</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Skip Dialog</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>No Cooking Animation</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Auto Mutterfly</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Auto Destroy</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Auto Loot</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Auto Absorb</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>No Absorb Animation</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Custom Interaction Range</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Auto Dungeon Restart</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visuals & Teleport -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card card-hover h-100">
+                            <div class="card-body">
+                                <div class="feature-icon text-info mb-3">
+                                    <i class="bi bi-eye"></i>
+                                </div>
+                                <h5 class="card-title text-gradient">Visuals & Teleport</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check2 text-success me-2"></i>ESP (Large selection)</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Boxes</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Tracers</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Distance</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Ascention Material filters</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Cooking & Synthesis filters</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Ore filters</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Monster filters</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Puzzle filters</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Skin Changer</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Player Scale</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Peeking</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Map Teleport</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Chest Teleport</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Custom Teleport</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Large selection of TP lists</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Miscellaneous -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card card-hover h-100">
+                            <div class="card-body">
+                                <div class="feature-icon text-primary mb-3">
+                                    <i class="bi bi-tools"></i>
+                                </div>
+                                <h5 class="card-title text-gradient">Miscellaneous</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Hide UI</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Freecam</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>UID Changer</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>FOV Changer</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>FPS Unlocker</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>FPS Display</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>CPU Saver</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Themes</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Hotkeys</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Overlay Support</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>No Reload Requirements</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Linux Support (quase)</li>
+                                    <li><i class="bi bi-check2 text-success me-2"></i>Multi-language Support</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5>World</h5>
-                            <ul>
-                                <li>Speedhack</li>
-                                <li>Killaura</li>
-                                <li>Entity Vacuum</li>
-                                <li>Dumb Enemies</li>
-                                <li>Force Skip Button</li>
-                                <li>Skip Dialog</li>
-                                <li>No Cooking Animation</li>
-                                <li>Auto Mutterfly</li>
-                                <li>Auto Destroy</li>
-                                <li>Auto Loot</li>
-                                <li>Auto Absorb</li>
-                                <li>No Absorb Animation</li>
-                                <li>Custom Interaction Range</li>
-                                <li>Auto Dungeon Restart</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5>Visuals & Teleport</h5>
-                            <ul>
-                                <li>ESP (Large selection)</li>
-                                <li>Boxes</li>
-                                <li>Tracers</li>
-                                <li>Distance</li>
-                                <li>Ascention Material filters</li>
-                                <li>Cooking & Synthesis filters</li>
-                                <li>Ore filters</li>
-                                <li>Monster filters</li>
-                                <li>Puzzle filters</li>
-                                <li>Skin Changer</li>
-                                <li>Player Scale</li>
-                                <li>Peeking</li>
-                                <li>Map Teleport</li>
-                                <li>Chest Teleport</li>
-                                <li>Custom Teleport</li>
-                                <li>Large selection of TP lists</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5>Miscellaneous</h5>
-                            <ul>
-                                <li>Hide UI</li>
-                                <li>Freecam</li>
-                                <li>UID Changer</li>
-                                <li>FOV Changer</li>
-                                <li>FPS Unlocker</li>
-                                <li>FPS Display</li>
-                                <li>CPU Saver</li>
-                                <li>Themes</li>
-                                <li>Hotkeys</li>
-                                <li>Overlay Support</li>
-                                <li>No Reload Requirements</li>
-                                <li>Linux Support (quase)</li>
-                                <li>Multi-language Support</li>
-                            </ul>
+                <!-- Call to Action -->
+                <div class="row mt-5">
+                    <div class="col-12 text-center">
+                        <div class="card bg-gradient-primary text-white">
+                            <div class="card-body py-5">
+                                <h3 class="card-title">Pronto para começar?</h3>
+                                <p class="card-text">Adquira o KittenWave e eleve sua experiência em Wuthering Waves</p>
+                                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                    <a href="buy.html" class="btn btn-light btn-lg">
+                                        <i class="bi bi-cart-plus me-2"></i>Comprar Agora - R$ 140,00
+                                    </a>
+                                    <a href="../index.html" class="btn btn-outline-light btn-lg">
+                                        <i class="bi bi-arrow-left me-2"></i>Voltar ao Início
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -198,7 +361,86 @@
         </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <footer class="footer bg-gradient-dark py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-gradient mb-3">
+                        <i class="bi bi-stars text-primary me-2"></i>
+                        Nyx Store
+                    </h5>
+                    <p class="text-muted">
+                        Sua loja premium de gaming. Oferecemos os melhores produtos e serviços 
+                        para gamers exigentes.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-outline-gradient btn-sm">
+                            <i class="bi bi-discord"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-gradient btn-sm">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-gradient btn-sm">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-gradient mb-3">Produtos</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="unicore.html" class="text-muted text-decoration-none hover-primary">Unicore</a></li>
+                        <li><a href="kittenwave.html" class="text-muted text-decoration-none hover-primary">KittenWave</a></li>
+                        <li><a href="products.html" class="text-muted text-decoration-none hover-primary">Todos os Produtos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-gradient mb-3">Suporte</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="faq.html" class="text-muted text-decoration-none hover-primary">FAQ</a></li>
+                        <li><a href="buy.html" class="text-muted text-decoration-none hover-primary">Como Comprar</a></li>
+                        <li><a href="functions.html" class="text-muted text-decoration-none hover-primary">Funções</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h6 class="text-gradient mb-3">Contato</h6>
+                    <p class="text-muted mb-2">
+                        <i class="bi bi-envelope me-2 text-primary"></i>
+                        suporte@nyxstore.com
+                    </p>
+                    <p class="text-muted mb-2">
+                        <i class="bi bi-discord me-2 text-primary"></i>
+                        Discord: NyxStore#0001
+                    </p>
+                    <p class="text-muted">
+                        <i class="bi bi-clock me-2 text-primary"></i>
+                        Atendimento 24/7
+                    </p>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">
+                        &copy; 2024 Nyx Store. Todos os direitos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3 hover-primary">Termos de Uso</a>
+                    <a href="#" class="text-muted text-decoration-none hover-primary">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>

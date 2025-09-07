@@ -1,175 +1,510 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" data-bs-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyx Store - FAQ</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Style/style.css">
+    <title>FAQ - Nyx Store</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="../img/PSX_20250803_013208.png" alt="Nyx Store Logo" class="logo-img">
-                    Nyx Store
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="bi bi-stars text-primary me-2"></i>
+                <span class="text-gradient">Nyx Store</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="bi bi-house me-1"></i>Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">
+                            <i class="bi bi-box me-1"></i>Produtos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buy.html">
+                            <i class="bi bi-cart me-1"></i>Como Comprar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="faq.html">
+                            <i class="bi bi-question-circle me-1"></i>FAQ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="functions.html">
+                            <i class="bi bi-gear me-1"></i>Funções
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Search and Cart -->
+                <div class="d-flex align-items-center">
+                    <div class="input-group me-3" style="width: 250px;">
+                        <span class="input-group-text bg-dark border-secondary">
+                            <i class="bi bi-search text-muted"></i>
+                        </span>
+                        <input type="search" class="form-control bg-dark border-secondary text-light" 
+                               placeholder="Buscar na FAQ...">
+                    </div>
+                    <button class="btn btn-outline-primary position-relative me-2">
+                        <i class="bi bi-cart3"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                            0
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-5 mt-3">
+
+        <!-- Hero Section -->
+        <section class="hero-compact bg-gradient-dark">
+            <div class="container text-center">
+                <h1 class="display-4 fw-bold text-gradient mb-4">
+                    <i class="bi bi-question-circle-fill me-3"></i>FAQ
+                </h1>
+                <p class="lead text-muted">Perguntas Frequentes - Tire suas dúvidas sobre nossos produtos</p>
+            </div>
+        </section>
+
+        <!-- FAQ Search -->
+        <section class="py-4 bg-dark">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="search-form">
+                            <div class="input-group">
+                                <span class="input-group-text bg-dark border-secondary">
+                                    <i class="bi bi-search text-muted"></i>
+                                </span>
+                                <input type="search" class="form-control bg-dark border-secondary text-light" 
+                                       placeholder="Buscar nas perguntas frequentes..." id="faqSearch">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Categories -->
+        <section class="py-4">
+            <div class="container">
+                <div class="d-flex justify-content-center mb-4">
+                    <ul class="nav nav-pills">
                         <li class="nav-item">
-                            <a class="nav-link" href="main.html">Inicio</a>
+                            <a class="nav-link active" data-category="all" href="#">
+                                <i class="bi bi-grid me-2"></i>Todas
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="products.html">Produtos</a>
+                            <a class="nav-link" data-category="general" href="#">
+                                <i class="bi bi-info-circle me-2"></i>Geral
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="buy.html">Como adquirir</a>
+                            <a class="nav-link" data-category="payment" href="#">
+                                <i class="bi bi-credit-card me-2"></i>Pagamento
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="faq.html">FAQ</a>
+                            <a class="nav-link" data-category="support" href="#">
+                                <i class="bi bi-headset me-2"></i>Suporte
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-category="security" href="#">
+                                <i class="bi bi-shield-check me-2"></i>Segurança
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <h1 class="hero-title">FAQ</h1>
-                <p class="hero-sub-description">Perguntas Frequentes - Tire suas dúvidas</p>
-            </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="container mt-2">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    
-                    <!-- Pergunta 1 -->
-                    <div class="card faq-card mb-4">
-                        <div class="card-body">
-                            <div class="faq-question">
-                                <h4>💼 Como recebo o produto após a compra?</h4>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Após a confirmação do pagamento, você receberá:</p>
-                                <ul>
-                                    <li>Sua chave de acesso exclusiva</li>
-                                    <li>Tutorial completo de instalação</li>
-                                    <li>Suporte direto via Discord</li>
-                                </ul>
-                                <p>Todo o processo é enviado diretamente para você via Discord em poucos minutos.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pergunta 2 -->
-                    <div class="card faq-card mb-4">
-                        <div class="card-body">
-                            <div class="faq-question">
-                                <h4>🛠️ Como obtenho suporte se precisar de ajuda?</h4>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Oferecemos suporte completo através do Discord:</p>
-                                <ul>
-                                    <li><strong>Canais de ajuda</strong> no servidor da comunidade</li>
-                                    <li><strong>Contato direto</strong> via DM: <code>nyxzzin</code></li>
-                                    <li><strong>Suporte 24/7</strong> para questões urgentes</li>
-                                </ul>
-                                <p>Nossa equipe está sempre pronta para ajudar com qualquer dúvida ou problema.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pergunta 3 -->
-                    <div class="card faq-card mb-4">
-                        <div class="card-body">
-                            <div class="faq-question">
-                                <h4>⚠️ Posso ser banido?</h4>
-                            </div>
-                            <div class="faq-answer">
-                                <p><strong>Importante:</strong> Sim, existe risco de banimento ao usar qualquer software de modificação.</p>
-                                <div class="warning-box">
-                                    <h6>⚡ Nossos sistemas de proteção:</h6>
-                                    <ul>
-                                        <li>Proteção avançada anti-detecção</li>
-                                        <li>Atualizações constantes de segurança</li>
-                                        <li>Risco baixo, mas não nulo</li>
-                                    </ul>
-                                </div>
-                                <p><em>Use sempre por sua conta e risco. Recomendamos prudência e responsabilidade.</em></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pergunta 4 -->
-                    <div class="card faq-card mb-4">
-                        <div class="card-body">
-                            <div class="faq-question">
-                                <h4>🔄 Os produtos recebem atualizações?</h4>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Sim! Todos os nossos produtos são constantemente atualizados:</p>
-                                <ul>
-                                    <li><strong>Unicore:</strong> Atualizações automáticas</li>
-                                    <li><strong>KittenWave:</strong> Sem necessidade de reload</li>
-                                    <li>Compatibilidade com novas versões dos jogos</li>
-                                    <li>Melhorias de performance e segurança</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pergunta 5 -->
-                    <div class="card faq-card mb-4">
-                        <div class="card-body">
-                            <div class="faq-question">
-                                <h4>💳 Quais formas de pagamento aceitas?</h4>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Aceitamos as seguintes formas de pagamento:</p>
-                                <div class="payment-options">
-                                    <div class="payment-option">
-                                        <span class="payment-icon">📱</span>
-                                        <strong>PIX</strong> - Pagamento instantâneo
-                                    </div>
-                                    <div class="payment-option">
-                                        <span class="payment-icon">₿</span>
-                                        <strong>Crypto (USDT)</strong> - Criptomoedas
+        <!-- FAQ Accordion -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="accordion" id="faqAccordion">
+                            
+                            <!-- FAQ Item 1 -->
+                            <div class="accordion-item bg-dark border-secondary mb-3 faq-item" data-category="general">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-dark text-light border-0" type="button" 
+                                            data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false">
+                                        <i class="bi bi-box-seam text-primary me-3"></i>
+                                        <strong>Como recebo o produto após a compra?</strong>
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body bg-dark text-light">
+                                        <p class="mb-3">Após a confirmação do pagamento, você receberá:</p>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-key text-primary me-2"></i>Sua chave de acesso exclusiva</li>
+                                            <li class="mb-2"><i class="bi bi-file-text text-info me-2"></i>Tutorial completo de instalação</li>
+                                            <li class="mb-2"><i class="bi bi-discord text-success me-2"></i>Suporte direto via Discord</li>
+                                        </ul>
+                                        <div class="alert alert-info mt-3">
+                                            <i class="bi bi-info-circle me-2"></i>
+                                            Todo o processo é enviado diretamente para você via Discord em poucos minutos.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- FAQ Item 2 -->
+                            <div class="accordion-item bg-dark border-secondary mb-3 faq-item" data-category="support">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-dark text-light border-0" type="button" 
+                                            data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
+                                        <i class="bi bi-headset text-success me-3"></i>
+                                        <strong>Como obtenho suporte se precisar de ajuda?</strong>
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body bg-dark text-light">
+                                        <p class="mb-3">Oferecemos suporte completo através do Discord:</p>
+                                        <div class="row g-3">
+                                            <div class="col-md-4">
+                                                <div class="card bg-success bg-opacity-10 border-success h-100">
+                                                    <div class="card-body text-center">
+                                                        <i class="bi bi-chat-dots display-6 text-success mb-2"></i>
+                                                        <h6 class="text-success">Canais de Ajuda</h6>
+                                                        <small class="text-muted">Comunidade ativa</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="card bg-info bg-opacity-10 border-info h-100">
+                                                    <div class="card-body text-center">
+                                                        <i class="bi bi-person-lines-fill display-6 text-info mb-2"></i>
+                                                        <h6 class="text-info">Contato Direto</h6>
+                                                        <small class="text-muted">DM: <code>nyxzzin</code></small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="card bg-warning bg-opacity-10 border-warning h-100">
+                                                    <div class="card-body text-center">
+                                                        <i class="bi bi-clock display-6 text-warning mb-2"></i>
+                                                        <h6 class="text-warning">Suporte 24/7</h6>
+                                                        <small class="text-muted">Sempre disponível</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 3 -->
+                            <div class="accordion-item bg-dark border-secondary mb-3 faq-item" data-category="security">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-dark text-light border-0" type="button" 
+                                            data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
+                                        <i class="bi bi-exclamation-triangle text-warning me-3"></i>
+                                        <strong>Posso ser banido usando os produtos?</strong>
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body bg-dark text-light">
+                                        <div class="alert alert-warning">
+                                            <i class="bi bi-exclamation-triangle me-2"></i>
+                                            <strong>Importante:</strong> Sim, existe risco de banimento ao usar qualquer software de modificação.
+                                        </div>
+                                        
+                                        <h6 class="text-primary mb-3">⚡ Nossos sistemas de proteção:</h6>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-shield-check text-success me-2"></i>Proteção avançada anti-detecção</li>
+                                            <li class="mb-2"><i class="bi bi-arrow-clockwise text-info me-2"></i>Atualizações constantes de segurança</li>
+                                            <li class="mb-2"><i class="bi bi-graph-down text-warning me-2"></i>Risco baixo, mas não nulo</li>
+                                        </ul>
+                                        
+                                        <div class="alert alert-danger mt-3">
+                                            <i class="bi bi-exclamation-octagon me-2"></i>
+                                            <em>Use sempre por sua conta e risco. Recomendamos prudência e responsabilidade.</em>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 4 -->
+                            <div class="accordion-item bg-dark border-secondary mb-3 faq-item" data-category="general">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-dark text-light border-0" type="button" 
+                                            data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">
+                                        <i class="bi bi-arrow-clockwise text-info me-3"></i>
+                                        <strong>Os produtos recebem atualizações?</strong>
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body bg-dark text-light">
+                                        <p class="mb-3">Sim! Todos os nossos produtos são constantemente atualizados:</p>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div class="card bg-primary bg-opacity-10 border-primary">
+                                                    <div class="card-body">
+                                                        <h6 class="text-primary"><i class="bi bi-lightning me-2"></i>Unicore</h6>
+                                                        <ul class="list-unstyled small">
+                                                            <li>✅ Atualizações automáticas</li>
+                                                            <li>✅ Compatibilidade garantida</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card bg-info bg-opacity-10 border-info">
+                                                    <div class="card-body">
+                                                        <h6 class="text-info"><i class="bi bi-water me-2"></i>KittenWave</h6>
+                                                        <ul class="list-unstyled small">
+                                                            <li>✅ Sem necessidade de reload</li>
+                                                            <li>✅ Updates em tempo real</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 5 -->
+                            <div class="accordion-item bg-dark border-secondary mb-3 faq-item" data-category="payment">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-dark text-light border-0" type="button" 
+                                            data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false">
+                                        <i class="bi bi-credit-card text-success me-3"></i>
+                                        <strong>Quais formas de pagamento são aceitas?</strong>
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body bg-dark text-light">
+                                        <p class="mb-4">Aceitamos as seguintes formas de pagamento:</p>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div class="card bg-success bg-opacity-10 border-success">
+                                                    <div class="card-body text-center">
+                                                        <i class="bi bi-phone display-4 text-success mb-3"></i>
+                                                        <h5 class="text-success">PIX</h5>
+                                                        <p class="text-muted mb-0">Pagamento instantâneo</p>
+                                                        <span class="badge bg-success mt-2">Recomendado</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card bg-warning bg-opacity-10 border-warning">
+                                                    <div class="card-body text-center">
+                                                        <i class="bi bi-currency-bitcoin display-4 text-warning mb-3"></i>
+                                                        <h5 class="text-warning">Crypto (USDT)</h5>
+                                                        <p class="text-muted mb-0">Criptomoedas</p>
+                                                        <span class="badge bg-warning text-dark mt-2">Seguro</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 6 -->
+                            <div class="accordion-item bg-dark border-secondary mb-3 faq-item" data-category="general">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-dark text-light border-0" type="button" 
+                                            data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false">
+                                        <i class="bi bi-pc-display text-info me-3"></i>
+                                        <strong>Quais são os requisitos do sistema?</strong>
+                                    </button>
+                                </h2>
+                                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body bg-dark text-light">
+                                        <h6 class="text-primary mb-3">Requisitos mínimos:</h6>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-windows text-info me-2"></i>Windows 10/11 (64-bit)</li>
+                                            <li class="mb-2"><i class="bi bi-memory text-warning me-2"></i>4GB RAM mínimo (8GB recomendado)</li>
+                                            <li class="mb-2"><i class="bi bi-hdd text-success me-2"></i>500MB espaço livre</li>
+                                            <li class="mb-2"><i class="bi bi-wifi text-primary me-2"></i>Conexão com internet estável</li>
+                                        </ul>
+                                        <div class="alert alert-info mt-3">
+                                            <i class="bi bi-lightbulb me-2"></i>
+                                            <strong>Dica:</strong> Melhor performance com SSD e placa de vídeo dedicada.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="container mt-4 mb-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card contact-faq-card">
-                        <div class="card-body text-center">
-                            <h4>❓ Não encontrou sua resposta?</h4>
-                            <p>Entre em contato conosco diretamente no Discord</p>
-                            <a href="https://discord.gg/6uwa7Q5rma" class="btn btn-primary discord-btn">
-                                Falar no Discord
-                            </a>
+        <!-- Contact CTA -->
+        <section class="py-5 bg-dark">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card bg-primary bg-opacity-10 border-primary">
+                            <div class="card-body text-center p-5">
+                                <i class="bi bi-question-circle display-4 text-primary mb-4"></i>
+                                <h3 class="text-light mb-3">Não encontrou sua resposta?</h3>
+                                <p class="text-muted mb-4">
+                                    Nossa equipe está sempre pronta para ajudar! Entre em contato conosco diretamente no Discord.
+                                </p>
+                                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                                    <a href="https://discord.gg/6uwa7Q5rma" class="btn btn-primary btn-lg">
+                                        <i class="bi bi-discord me-2"></i>Falar no Discord
+                                    </a>
+                                    <a href="buy.html" class="btn btn-outline-primary btn-lg">
+                                        <i class="bi bi-cart me-2"></i>Como Comprar
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-top py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-gradient fw-bold">Nyx Store</h5>
+                    <p class="text-muted">
+                        Sua loja premium de soluções avançadas para jogos. Qualidade e segurança garantidas.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-discord"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2">
+                    <h6 class="text-light">Produtos</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="unicore.html" class="text-muted text-decoration-none">Unicore</a></li>
+                        <li><a href="kittenwave.html" class="text-muted text-decoration-none">KittenWave</a></li>
+                        <li><a href="functions.html" class="text-muted text-decoration-none">Funções</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2">
+                    <h6 class="text-light">Suporte</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+                        <li><a href="buy.html" class="text-muted text-decoration-none">Como Comprar</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h6 class="text-light">Newsletter</h6>
+                    <p class="text-muted small">Receba atualizações sobre novos produtos</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control bg-dark border-secondary" placeholder="Seu email">
+                        <button class="btn btn-primary" type="button">
+                            <i class="bi bi-envelope"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="border-secondary my-4">
+            
+            <div class="text-center text-muted">
+                <p class="mb-0">&copy; 2024 Nyx Store. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- FAQ Interactive Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            const searchInput = document.getElementById('faqSearch');
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.accordion-button').textContent.toLowerCase();
+                    const answer = item.querySelector('.accordion-body').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = searchTerm === '' ? 'block' : 'none';
+                    }
+                });
+            });
+            
+            // Category filtering
+            const categoryLinks = document.querySelectorAll('[data-category]');
+            
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Update active category
+                    categoryLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide FAQ items
+                    faqItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                    
+                    // Clear search
+                    searchInput.value = '';
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>

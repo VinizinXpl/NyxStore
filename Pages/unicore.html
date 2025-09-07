@@ -1,136 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyx Store - Unicore</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Style/style.css">
+    <title>Unicore - Nyx Store</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
 <body>
-
-   <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="../img/PSX_20250803_013208.png" alt="Nyx Store Logo" class="logo-img">
-                    Nyx Store
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="bi bi-stars text-primary me-2"></i>
+                <span class="text-gradient">Nyx Store</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="main.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="products.html">Produtos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="buy.html">Como adquirir</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.html">FAQ</a>
-                        </li>
-                    </ul>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="bi bi-house me-1"></i>Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">
+                            <i class="bi bi-box me-1"></i>Produtos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buy.html">
+                            <i class="bi bi-cart me-1"></i>Como Comprar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">
+                            <i class="bi bi-question-circle me-1"></i>FAQ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="functions.html">
+                            <i class="bi bi-gear me-1"></i>Funções
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Search and Cart -->
+                <div class="d-flex align-items-center">
+                    <div class="input-group me-3" style="width: 250px;">
+                        <span class="input-group-text bg-dark border-secondary">
+                            <i class="bi bi-search text-muted"></i>
+                        </span>
+                        <input type="search" class="form-control bg-dark border-secondary text-light" 
+                               placeholder="Buscar produtos...">
+                    </div>
+                    <button class="btn btn-outline-primary position-relative me-2">
+                        <i class="bi bi-cart3"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                            0
+                        </span>
+                    </button>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
+    <main class="pt-5 mt-3">
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h1 class="hero-title">Unicore - Genshin Impact</h1>
-                <p class="hero-sub-description">A ferramenta mais completa para Genshin Impact</p>
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="hero-title">Unicore</h1>
+                        <p class="hero-description">
+                            A ferramenta mais completa e segura para Genshin Impact. 
+                            Recursos avançados, interface intuitiva e proteção anti-detecção.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <span class="badge bg-success fs-6 px-3 py-2">
+                                <i class="bi bi-shield-check me-1"></i>Undetected
+                            </span>
+                            <span class="badge bg-primary fs-6 px-3 py-2">
+                                <i class="bi bi-arrow-clockwise me-1"></i>Auto-Update
+                            </span>
+                            <span class="badge bg-info fs-6 px-3 py-2">
+                                <i class="bi bi-headset me-1"></i>24/7 Support
+                            </span>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="buy.html" class="btn btn-gradient btn-lg">
+                                <i class="bi bi-cart-plus me-2"></i>Comprar Agora
+                            </a>
+                            <a href="#functions" class="btn btn-outline-light btn-lg">
+                                <i class="bi bi-list-check me-2"></i>Ver Funções
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <img src="../img/Unicore.png" alt="Unicore" class="img-fluid rounded-lg shadow-lg">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="container mt-3">
-            <div class="row">
-                <!-- Especificações -->
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h3>Especificações do Unicore</h3>
-                            <ul>
-                                <li><strong>Compatibilidade:</strong> Genshin Impact versão atual</li>
-                                <li><strong>Sistema:</strong> Windows 10/11</li>
-                                <li><strong>Segurança:</strong> Proteção avançada anti-detecção</li>
-                                <li><strong>Atualizações:</strong> Automáticas</li>
-                                <li><strong>Suporte:</strong> 24/7 via Discord</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Preços -->
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h3>Planos e Preços</h3>
-                            <div class="pricing-plans">
-                                <div class="price-item mb-3">
-                                    <h5>2 Dias</h5>
-                                    <p class="price">R$ 15,50</p>
-                                </div>
-                                <div class="price-item mb-3">
-                                    <h5>7 Dias</h5>
-                                    <p class="price">R$ 36,90</p>
-                                </div>
-                                <div class="price-item mb-3">
-                                    <h5>30 Dias</h5>
-                                    <p class="price">R$ 82,90</p>
+        <!-- Product Info -->
+        <section class="py-5 bg-gradient-dark">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <!-- Especificações -->
+                    <div class="col-lg-8">
+                        <div class="card card-hover h-100">
+                            <div class="card-body">
+                                <h3 class="card-title text-gradient mb-4 text-center">
+                                    <i class="bi bi-gear-fill me-2"></i>Especificações
+                                </h3>
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-controller text-primary me-2"></i>
+                                            <strong>Jogo:</strong>
+                                        </div>
+                                        <p class="text-muted">Genshin Impact</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-windows text-primary me-2"></i>
+                                            <strong>Sistema:</strong>
+                                        </div>
+                                        <p class="text-muted">Windows 10/11 (64-bit)</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-shield-check text-primary me-2"></i>
+                                            <strong>Proteção:</strong>
+                                        </div>
+                                        <p class="text-muted">Anti-detecção avançada</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-arrow-clockwise text-primary me-2"></i>
+                                            <strong>Atualizações:</strong>
+                                        </div>
+                                        <p class="text-muted">Automáticas</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-headset text-primary me-2"></i>
+                                            <strong>Suporte:</strong>
+                                        </div>
+                                        <p class="text-muted">Discord 24/7</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-layout-wtf text-primary me-2"></i>
+                                            <strong>Interface:</strong>
+                                        </div>
+                                        <p class="text-muted">Overlay intuitivo</p>
+                                    </div>
                                 </div>
                             </div>
-                            <a href="buy.html" class="btn btn-primary mt-3">Comprar Agora</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Funções detalhadas -->
-        <section class="container mt-3">
-            <div class="card">
-                <div class="card-body">
-                    <h3>Funções Disponíveis</h3>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h5>Combat</h5>
-                            <ul>
-                                <li>Kill Aura</li>
-                                <li>Rapid Fire</li>
-                                <li>AoE Damage</li>
-                                <li>Infinite Ultimate</li>
-                                <li>Magnetizer</li>
-                                <li>Freeze Enemy</li>
-                            </ul>
+        <!-- Functions Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-gradient">Funcionalidades do Unicore</h2>
+                    <p class="lead text-muted">Ferramentas avançadas para dominar Genshin Impact</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Player Functions -->
+                    <div class="col-lg-6">
+                        <div class="card card-hover h-100">
+                            <div class="card-body">
+                                <h4 class="card-title text-gradient mb-4">
+                                    <i class="bi bi-person-fill text-primary me-2"></i>Funções do Jogador
+                                </h4>
+                                <div class="row g-2">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>God Mode</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Infinite Stamina</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>No Cooldown</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Attack Multiplier</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Defense Multiplier</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Speed Hack</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Infinite Energy</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Auto Heal</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Auto Revive</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Freeze Enemies</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <h5>Player</h5>
-                            <ul>
-                                <li>ESP</li>
-                                <li>Infinite Stamina</li>
-                                <li>Fly</li>
-                                <li>GodMode</li>
-                                <li>Auto Loot</li>
-                                <li>No Fall Damage</li>
-                            </ul>
+                    </div>
+
+                    <!-- World Functions -->
+                    <div class="col-lg-6">
+                        <div class="card card-hover h-100">
+                            <div class="card-body">
+                                <h4 class="card-title text-gradient mb-4">
+                                    <i class="bi bi-globe text-primary me-2"></i>Funções do Mundo
+                                </h4>
+                                <div class="row g-2">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Auto Farm</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Item ESP</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Chest ESP</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Teleport to Waypoints</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Auto Collect</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Enemy ESP</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>NPC ESP</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Auto Quest</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Instant Domain</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Kill All Monsters</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <h5>Utility</h5>
-                            <ul>
-                                <li>Auto Dialogs</li>
-                                <li>Skip Cutscenes</li>
-                                <li>Auto Seelie</li>
-                                <li>Fast Teleport</li>
-                                <li>Quest Teleport</li>
-                            </ul>
+                    </div>
+
+                    <!-- Visual Functions -->
+                    <div class="col-lg-6">
+                        <div class="card card-hover h-100">
+                            <div class="card-body">
+                                <h4 class="card-title text-gradient mb-4">
+                                    <i class="bi bi-eye-fill text-primary me-2"></i>Funções Visuais
+                                </h4>
+                                <div class="row g-2">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>FOV Changer</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Weather Control</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Time Control</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Free Camera</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>No Fog</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Brightness Control</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Saturation Control</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Hide UI</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Custom Overlays</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Screenshot Mode</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Misc Functions -->
+                    <div class="col-lg-6">
+                        <div class="card card-hover h-100">
+                            <div class="card-body">
+                                <h4 class="card-title text-gradient mb-4">
+                                    <i class="bi bi-tools text-primary me-2"></i>Funções Diversas
+                                </h4>
+                                <div class="row g-2">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Custom Hotkeys</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Auto Login</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Game Optimizer</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Memory Cleaner</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Config Manager</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Auto Updates</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Backup System</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Debug Console</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Discord Integration</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Profile System</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card bg-gradient-primary text-white">
+                            <div class="card-body text-center p-5">
+                                <i class="bi bi-download display-4 mb-4"></i>
+                                <h3 class="mb-3">Pronto para começar?</h3>
+                                <p class="mb-4">
+                                    Entre em contato conosco no Discord para adquirir o Unicore e revolucionar 
+                                    sua experiência no Genshin Impact!
+                                </p>
+                                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                                    <a href="https://discord.gg/6uwa7Q5rma" class="btn btn-light btn-lg">
+                                        <i class="bi bi-discord me-2"></i>Comprar Agora
+                                    </a>
+                                    <a href="faq.html" class="btn btn-outline-light btn-lg">
+                                        <i class="bi bi-question-circle me-2"></i>Ver FAQ
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -138,7 +344,69 @@
         </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <footer class="bg-dark border-top py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-gradient fw-bold">Nyx Store</h5>
+                    <p class="text-muted">
+                        Sua loja premium de soluções avançadas para jogos. Qualidade e segurança garantidas.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-discord"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2">
+                    <h6 class="text-light">Produtos</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="unicore.html" class="text-muted text-decoration-none">Unicore</a></li>
+                        <li><a href="kittenwave.html" class="text-muted text-decoration-none">KittenWave</a></li>
+                        <li><a href="functions.html" class="text-muted text-decoration-none">Funções</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2">
+                    <h6 class="text-light">Suporte</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+                        <li><a href="buy.html" class="text-muted text-decoration-none">Como Comprar</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h6 class="text-light">Newsletter</h6>
+                    <p class="text-muted small">Receba atualizações sobre novos produtos</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control bg-dark border-secondary" placeholder="Seu email">
+                        <button class="btn btn-primary" type="button">
+                            <i class="bi bi-envelope"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="border-secondary my-4">
+            
+            <div class="text-center text-muted">
+                <p class="mb-0">&copy; 2024 Nyx Store. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
