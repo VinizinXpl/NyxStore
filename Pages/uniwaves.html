@@ -78,14 +78,14 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center justify-content-center text-center">
                     <div class="col-lg-8">
                         <h1 class="hero-title">Uniwaves</h1>
                         <p class="hero-description">
                             A ferramenta mais completa e segura para Wuthering Waves. 
                             Recursos avançados, interface intuitiva e proteção anti-detecção.
                         </p>
-                        <div class="d-flex flex-wrap gap-3 mb-4">
+                        <div class="d-flex flex-wrap gap-3 mb-4 justify-content-center">
                             <span class="badge bg-success fs-6 px-3 py-2">
                                 <i class="bi bi-shield-check me-1"></i>Indetectável
                             </span>
@@ -96,12 +96,12 @@
                                 <i class="bi bi-headset me-1"></i>24/7 Support
                             </span>
                         </div>
-                        <div class="d-flex flex-wrap gap-3">
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
                             <a href="buy.html" class="btn btn-gradient btn-lg">
                                 <i class="bi bi-cart-plus me-2"></i>Comprar Agora
                             </a>
-                            <a href="#functions" class="btn btn-outline-light btn-lg">
-                                <i class="bi bi-list-check me-2"></i>Ver Funções
+                            <a href="#demo" class="btn btn-outline-light btn-lg">
+                                <i class="bi bi-play-circle me-2"></i>Ver Demonstração
                             </a>
                         </div>
                     </div>
@@ -173,13 +173,64 @@
                 </div>
             </div>
         </section>
+
+        <!-- Video Demo Section -->
+        <section class="py-5" id="demo">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold text-gradient">Demonstração do Produto</h2>
+                    <p class="lead text-muted">Veja o UniWaves em ação e todas suas funcionalidades</p>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card card-hover">
+                            <div class="card-body p-0">
+                                <!-- Video Thumbnail -->
+                                <div class="position-relative" style="cursor: pointer;" onclick="openVideo()">
+                                    <img src="https://img.youtube.com/vi/CfFdEgl2Bu4/maxresdefault.jpg" 
+                                         alt="Demonstração do UniWaves" 
+                                         class="img-fluid w-100 rounded-top"
+                                         style="aspect-ratio: 16/9; object-fit: cover;">
+                                    
+                                    <!-- Play Button Overlay -->
+                                    <div class="position-absolute top-50 start-50 translate-middle">
+                                        <div class="bg-primary bg-opacity-90 rounded-circle d-flex align-items-center justify-content-center" 
+                                             style="width: 80px; height: 80px;">
+                                            <i class="bi bi-play-fill text-white" style="font-size: 2rem; margin-left: 4px;"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Hover Effect -->
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-25 rounded-top opacity-0 transition-opacity" 
+                                         style="transition: opacity 0.3s ease;" 
+                                         onmouseover="this.classList.remove('opacity-0')" 
+                                         onmouseout="this.classList.add('opacity-0')"></div>
+                                </div>
+                                
+                                <!-- Video Info -->
+                                <div class="p-4 text-center">
+                                    <h4 class="card-title text-gradient mb-3">Assista à Demonstração</h4>
+                                    <p class="card-text text-muted mb-4">
+                                        Veja como o UniWaves funciona, suas principais funcionalidades e como ele pode 
+                                        melhorar sua experiência no jogo.
+                                    </p>
+                                    <button onclick="openVideo()" class="btn btn-gradient btn-lg">
+                                        <i class="bi bi-play-fill me-2"></i>Assistir Demonstração
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Call to Action -->
                 <div class="row mt-5">
                     <div class="col-12 text-center">
                         <div class="card bg-gradient-primary text-white">
                             <div class="card-body py-5">
                                 <h3 class="card-title">Pronto para começar?</h3>
-                                <p class="card-text">Adquira o Unicore e domine Genshin Impact</p>
+                                <p class="card-text">Adquira o UniWaves e domine Wuthering Waves</p>
                                 <div class="d-flex justify-content-center gap-3 flex-wrap">
                                     <a href="products.html" class="btn btn-light btn-lg">
                                         <i class="bi bi-cart-plus me-2"></i>Ver Preços
@@ -258,9 +309,45 @@
         </div>
     </footer>
 
+    <!-- YouTube Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-gradient" id="videoModalLabel">
+                        <i class="bi bi-play-circle me-2"></i>Demonstração do Produto
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="youtubeFrame" src="" title="YouTube video player" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap 5.3 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- YouTube Modal Script -->
+    <script>
+        function openVideo() {
+            const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+            const iframe = document.getElementById('youtubeFrame');
+            iframe.src = 'https://www.youtube.com/embed/CfFdEgl2Bu4?autoplay=1';
+            modal.show();
+            
+            // Limpa o src quando o modal é fechado para parar o vídeo
+            document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
+                iframe.src = '';
+            });
+        }
+    </script>
 </body>
 
 </html>
