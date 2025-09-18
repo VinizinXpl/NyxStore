@@ -3,12 +3,13 @@
    ============================================================================ */
 
 .hero {
-    min-height: 100vh;
-    background: var(--dark-gradient);
+    min-height: 80vh; /* Reduz de 100vh para 80vh */
+    background: transparent; /* Remove background próprio para usar o bg-gradient-dark do HTML */
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
+    padding: 4rem 0; /* Padding vertical apenas */
 }
 
 .hero::before {
@@ -26,6 +27,19 @@
 .hero .container {
     position: relative;
     z-index: 2;
+    max-width: 1000px; /* Largura mais equilibrada */
+    margin: 0 auto; /* Centraliza o container */
+}
+.hero-compact .container.text-center .display-4 {
+    position: relative;
+    z-index: 2;
+    top: 100px;
+}
+
+.hero-compact .container.text-center .lead {
+    position: relative;
+    z-index: 2;
+    top: 100px;
 }
 
 /* Hero Content */
@@ -43,9 +57,10 @@
 .hero-description {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: #d1d5db;
-    margin-bottom: var(--space-xxl);
+    margin: 0 auto var(--space-xxl) auto; /* Centraliza horizontalmente */
     max-width: 600px;
     line-height: 1.6;
+    text-align: center; /* Centraliza o texto */
 }
 
 .hero-buttons {

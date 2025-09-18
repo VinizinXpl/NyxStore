@@ -6,17 +6,31 @@ footer {
     background: rgba(17, 24, 39, 0.95) !important;
     border-top: 1px solid rgba(99, 102, 241, 0.2) !important;
     backdrop-filter: blur(10px);
+    text-align: center; /* Centraliza todo o conteúdo do footer */
+}
+
+footer .container {
+    max-width: 1000px; /* Limita a largura para melhor centralização */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+footer .row {
+    justify-content: center; /* Centraliza as colunas */
+    align-items: center; /* Alinha verticalmente */
 }
 
 footer h5,
 footer h6 {
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--space-lg);
+    text-align: center; /* Centraliza títulos */
 }
 
 footer p {
     color: #9ca3af;
     line-height: 1.6;
+    text-align: center; /* Centraliza parágrafos */
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
 footer a {
@@ -24,6 +38,7 @@ footer a {
     text-decoration: none;
     transition: var(--transition-smooth);
     font-weight: var(--font-weight-medium);
+    display: inline-block; /* Para melhor centralização */
 }
 
 footer a:hover {
@@ -31,8 +46,20 @@ footer a:hover {
     transform: translateY(-1px);
 }
 
+footer .list-unstyled {
+    text-align: center; /* Centraliza listas */
+    padding: 0;
+    margin: 0 auto;
+}
+
 footer .list-unstyled li {
     margin-bottom: var(--space-sm);
+    text-align: center; /* Centraliza itens da lista */
+}
+
+footer .d-flex {
+    justify-content: center !important; /* Centraliza elementos flex */
+    align-items: center;
 }
 
 /* Social Media Buttons in Footer */
@@ -89,11 +116,13 @@ footer .copyright {
     color: #6b7280;
     font-size: 0.875rem;
     font-weight: var(--font-weight-medium);
+    text-align: center; /* Centraliza copyright */
 }
 
 /* Footer Logo Section */
 footer .footer-logo {
     margin-bottom: var(--space-lg);
+    text-align: center; /* Centraliza logo */
 }
 
 footer .footer-logo h5 {
@@ -102,16 +131,27 @@ footer .footer-logo h5 {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: var(--font-weight-extrabold);
+    text-align: center; /* Centraliza título do logo */
+}
+
+/* Centralização dos botões e elementos */
+footer .btn-outline-primary {
+    margin: 0 auto; /* Centraliza botões */
 }
 
 /* Responsive Footer */
 @media (max-width: 768px) {
     footer .row > div {
         margin-bottom: var(--space-xl);
-        text-align: center;
+        text-align: center !important; /* Força centralização em mobile */
     }
     
     footer .d-flex {
         justify-content: center !important;
+        flex-wrap: wrap;
+    }
+    
+    footer .col-md-6 {
+        text-align: center !important;
     }
 }
