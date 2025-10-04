@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Como comprar na NyxStore - Entre em contato para finalizar sua compra">
+    <title>Como Comprar - NyxStore</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo and Brand -->
+            <div class="nav-brand">
+                <!-- EDITABLE: Replace this image src with your shop logo -->
+                <img src="../assets/logo-placeholder.png" alt="NyxStore Logo" class="logo">
+                <span class="brand-name">NyxStore</span>
+            </div>
+
+            <!-- Hamburger Menu (Mobile) -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Início</a></li>
+                <li><a href="products.html" class="nav-link">Produtos</a></li>
+                <li><a href="how-to-buy.html" class="nav-link active">Como Comprar</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- How to Buy Content -->
+    <section class="how-to-buy-section">
+        <div class="container-narrow">
+            <h1 class="page-title">Como Comprar</h1>
+
+            <!-- Selected Product Display (populated by JS if user clicked Buy button) -->
+            <div class="selected-product" id="selectedProduct" style="display: none;">
+                <h2>Produto Selecionado</h2>
+                <div class="product-info">
+                    <p><strong>Produto:</strong> <span id="productName"></span></p>
+                    <p id="productDuration" style="display: none;"><strong>Duração:</strong> <span id="durationValue"></span></p>
+                    <p id="productPermanent" style="display: none;"><strong>Tipo:</strong> Produto Permanente (sem expiração)</p>
+                </div>
+            </div>
+
+            <!-- Seller Profile -->
+            <div class="seller-profile">
+                <h2>Vendedor</h2>
+                <div class="profile-card">
+                    <!-- EDITABLE: Replace seller photo -->
+                    <img src="../assets/seller-placeholder.png" alt="Seller nyx" class="seller-photo">
+                    <div class="seller-info">
+                        <!-- EDITABLE: Update seller name here -->
+                        <h3 class="seller-name">nyx</h3>
+                        <p class="seller-role">Proprietário da NyxStore</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Purchase Instructions -->
+            <div class="purchase-instructions">
+                <h2>Finalizando a Compra</h2>
+                <p class="instructions-text">
+                    Para finalizar sua compra, entre em contato comigo no Discord:
+                </p>
+                
+                <!-- EDITABLE: Replace ### with your actual Discord handle -->
+                <div class="discord-contact">
+                    <p class="discord-handle">Discord: <strong>###</strong></p>
+                </div>
+
+                <div class="info-required">
+                    <p><strong>Ao entrar em contato, forneça:</strong></p>
+                    <ul>
+                        <li>O produto que deseja comprar</li>
+                        <li>A duração selecionada (se aplicável)</li>
+                        <li>Seu método de pagamento preferido</li>
+                    </ul>
+                </div>
+
+                <div class="action-buttons">
+                    <!-- EDITABLE: Replace the href with your Discord server invite link -->
+                    <a href="https://discord.gg/your-invite-here" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        Entrar no Servidor
+                    </a>
+                    <a href="faq.html" class="btn-secondary">
+                        Ver FAQ
+                    </a>
+                </div>
+            </div>
+
+            <!-- Back to Products -->
+            <div class="back-link">
+                <a href="products.html">&larr; Voltar aos Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 NyxStore. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
