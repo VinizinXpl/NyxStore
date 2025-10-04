@@ -63,6 +63,8 @@ body {
     color: var(--color-light-2);
     background: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-2) 50%, var(--color-dark-3) 100%);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ========================================
@@ -214,6 +216,7 @@ body {
     text-align: center;
     padding: var(--spacing-xl) var(--spacing-sm);
     background: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-2) 50%, var(--color-dark-3) 100%);
+    flex: 1;
 }
 
 .hero-content {
@@ -276,6 +279,7 @@ body {
 .products-section {
     padding: var(--spacing-xxl) var(--spacing-sm);
     background: linear-gradient(180deg, var(--color-dark-3) 0%, var(--color-dark-1) 100%);
+    flex: 1;
 }
 
 .container {
@@ -431,6 +435,7 @@ body {
 .how-to-buy-section {
     min-height: 80vh;
     background: linear-gradient(135deg, var(--color-dark-1) 0%, var(--color-dark-2) 100%);
+    flex: 1;
 }
 
 .page-title {
@@ -661,6 +666,7 @@ body {
 .faq-section {
     min-height: 80vh;
     background: linear-gradient(135deg, var(--color-dark-1) 0%, var(--color-dark-2) 100%);
+    flex: 1;
 }
 
 .faq-list {
