@@ -23,10 +23,16 @@
             </button>
 
             <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Início</a></li>
-                <li><a href="products.html" class="nav-link">Produtos</a></li>
-                <li><a href="how-to-buy.html" class="nav-link active">Como Comprar</a></li>
-                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="../index.html" class="nav-link" data-translate="nav.home">Início</a></li>
+                <li><a href="products.html" class="nav-link" data-translate="nav.products">Produtos</a></li>
+                <li><a href="how-to-buy.html" class="nav-link active" data-translate="nav.howToBuy">Como Comprar</a></li>
+                <li><a href="faq.html" class="nav-link" data-translate="nav.faq">FAQ</a></li>
+                <li>
+                    <button id="languageToggle" class="language-toggle" aria-label="Trocar idioma">
+                        <span class="flag-icon">🇧🇷</span>
+                        <span class="lang-text">PT</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -34,67 +40,67 @@
     <!-- How to Buy Content -->
     <section class="how-to-buy-section">
         <div class="container-narrow">
-            <h1 class="page-title">Como Comprar</h1>
+            <h1 class="page-title" data-translate="howToBuy.title">Como Comprar</h1>
             <div class="selected-product" id="selectedProduct" style="display: none;">
-                <h2>Produto Selecionado</h2>
+                <h2 data-translate="howToBuy.selectedProduct">Produto Selecionado</h2>
                 <div class="product-info">
-                    <p><strong>Produto:</strong> <span id="productName"></span></p>
-                    <p id="productDuration" style="display: none;"><strong>Duração:</strong> <span id="durationValue"></span></p>
-                    <p id="productPermanent" style="display: none;"><strong>Tipo:</strong> Produto Permanente (sem expiração)</p>
+                    <p><strong data-translate="howToBuy.product">Produto:</strong> <span id="productName"></span></p>
+                    <p id="productDuration" style="display: none;"><strong data-translate="howToBuy.duration">Duração:</strong> <span id="durationValue"></span></p>
+                    <p id="productPermanent" style="display: none;"><strong data-translate="howToBuy.type">Tipo:</strong> <span data-translate="howToBuy.permanentNote">Produto Permanente (sem expiração)</span></p>
                 </div>
             </div>
 
             <!-- Seller Profile -->
             <div class="seller-profile">
-                <h2>Vendedor</h2>
+                <h2 data-translate="howToBuy.seller">Vendedor</h2>
                 <div class="profile-card">
                     <img src="../img/LogoNyx.png" alt="Seller nyx" class="seller-photo">
                     <div class="seller-info">
                         <h3 class="seller-name">nyx</h3>
-                        <p class="seller-role">Proprietário da NyxStore</p>
+                        <p class="seller-role" data-translate="howToBuy.sellerRole">Proprietário da NyxStore</p>
                     </div>
                 </div>
             </div>
 
             <!-- Purchase Instructions -->
             <div class="purchase-instructions">
-                <h2>Finalizando a Compra</h2>
-                <p class="instructions-text">
+                <h2 data-translate="howToBuy.finalizing">Finalizando a Compra</h2>
+                <p class="instructions-text" data-translate="howToBuy.instructions">
                     Para finalizar sua compra, entre em contato comigo no Discord:
                 </p>
                 
                 <div class="discord-contact">
-                    <p class="discord-handle">Discord: <strong>nyxzzin_</strong></p>
+                    <p class="discord-handle"><span data-translate="howToBuy.discord">Discord:</span> <strong>nyxzzin_</strong></p>
                 </div>
 
                 <div class="info-required">
-                    <p><strong>Ao entrar em contato, forneça:</strong></p>
+                    <p><strong data-translate="howToBuy.required">Ao entrar em contato, forneça:</strong></p>
                     <ul>
-                        <li>O produto que deseja comprar</li>
-                        <li>A duração selecionada</li>
-                        <li>Seu método de pagamento</li>
+                        <li data-translate="howToBuy.reqItem1">O produto que deseja comprar</li>
+                        <li data-translate="howToBuy.reqItem2">A duração selecionada</li>
+                        <li data-translate="howToBuy.reqItem3">Seu método de pagamento</li>
                     </ul>
                 </div>
 
                 <div class="action-buttons">
-                    <a href="https://discord.gg/8HRvQGZjPC" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                    <a href="https://discord.gg/8HRvQGZjPC" class="btn-primary" target="_blank" rel="noopener noreferrer" data-translate="howToBuy.enterServer">
                         Entrar no Servidor
                     </a>
-                    <a href="faq.html" class="btn-secondary">
+                    <a href="faq.html" class="btn-secondary" data-translate="howToBuy.viewFaq">
                         Ver FAQ
                     </a>
                 </div>
             </div>
 
             <div class="back-link">
-                <a href="products.html">&larr; Voltar aos Produtos</a>
+                <a href="products.html" data-translate="howToBuy.backToProducts">&larr; Voltar aos Produtos</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 NyxStore. Todos os direitos reservados.</p>
+        <p data-translate="footer.rights">&copy; 2025 NyxStore. Todos os direitos reservados.</p>
     </footer>
 
     <script src="../js/main.js"></script>

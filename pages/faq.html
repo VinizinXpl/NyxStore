@@ -27,10 +27,16 @@
 
             <!-- Navigation Links -->
             <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Início</a></li>
-                <li><a href="products.html" class="nav-link">Produtos</a></li>
-                <li><a href="how-to-buy.html" class="nav-link">Como Comprar</a></li>
-                <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+                <li><a href="../index.html" class="nav-link" data-translate="nav.home">Início</a></li>
+                <li><a href="products.html" class="nav-link" data-translate="nav.products">Produtos</a></li>
+                <li><a href="how-to-buy.html" class="nav-link" data-translate="nav.howToBuy">Como Comprar</a></li>
+                <li><a href="faq.html" class="nav-link active" data-translate="nav.faq">FAQ</a></li>
+                <li>
+                    <button id="languageToggle" class="language-toggle" aria-label="Trocar idioma">
+                        <span class="flag-icon">🇧🇷</span>
+                        <span class="lang-text">PT</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -38,14 +44,14 @@
     <!-- FAQ Content -->
     <section class="faq-section">
         <div class="container-narrow">
-            <h1 class="page-title">Perguntas Frequentes</h1>
+            <h1 class="page-title" data-translate="faq.title">Perguntas Frequentes</h1>
 
             <!-- FAQ Items -->
             <div class="faq-list">
                 <!-- FAQ Item 1 -->
                 <article class="faq-item">
-                    <h3 class="faq-question">Onde posso comprar os produtos?</h3>
-                    <p class="faq-answer">
+                    <h3 class="faq-question" data-translate="faq.q1">Onde posso comprar os produtos?</h3>
+                    <p class="faq-answer" data-translate="faq.a1">
                         Todos os produtos são adquiridos através de contato direto no Discord. 
                         Visite a página "Como Comprar" para instruções detalhadas.
                     </p>
@@ -53,8 +59,8 @@
 
                 <!-- FAQ Item 2 -->
                 <article class="faq-item">
-                    <h3 class="faq-question">Existem riscos ao usar esses produtos?</h3>
-                    <p class="faq-answer">
+                    <h3 class="faq-question" data-translate="faq.q2">Existem riscos ao usar esses produtos?</h3>
+                    <p class="faq-answer" data-translate="faq.a2">
                         O uso de hacks sempre envolve riscos, incluindo possível banimento. 
                         Use por sua conta e risco.
                     </p>
@@ -62,8 +68,8 @@
 
                 <!-- FAQ Item 3 -->
                 <article class="faq-item">
-                    <h3 class="faq-question">Existe algum tutorial disponível?</h3>
-                    <p class="faq-answer">
+                    <h3 class="faq-question" data-translate="faq.q3">Existe algum tutorial disponível?</h3>
+                    <p class="faq-answer" data-translate="faq.a3">
                         Sim, após a compra você receberá instruções completas de instalação e uso. 
                         Suporte adicional está disponível no servidor Discord.
                     </p>
@@ -71,8 +77,8 @@
 
                 <!-- FAQ Item 4 -->
                 <article class="faq-item">
-                    <h3 class="faq-question">Qual é a diferença entre produtos de subscrição e permanentes?</h3>
-                    <p class="faq-answer">
+                    <h3 class="faq-question" data-translate="faq.q4">Qual é a diferença entre produtos de subscrição e permanentes?</h3>
+                    <p class="faq-answer" data-translate="faq.a4">
                         Produtos de subscrição têm prazo definido (3, 7 ou 30 dias), enquanto produtos 
                         permanentes não expiram e são seus para sempre após a compra.
                     </p>
@@ -80,8 +86,8 @@
 
                 <!-- FAQ Item 5 -->
                 <article class="faq-item">
-                    <h3 class="faq-question">Quais métodos de pagamento são aceitos?</h3>
-                    <p class="faq-answer">
+                    <h3 class="faq-question" data-translate="faq.q5">Quais métodos de pagamento são aceitos?</h3>
+                    <p class="faq-answer" data-translate="faq.a5">
                         Os métodos de pagamento aceitos serão discutidos diretamente com o vendedor 
                         no Discord. Entre em contato para mais informações.
                     </p>
@@ -89,8 +95,8 @@
 
                 <!-- FAQ Item 6 -->
                 <article class="faq-item">
-                    <h3 class="faq-question">Posso receber reembolso?</h3>
-                    <p class="faq-answer">
+                    <h3 class="faq-question" data-translate="faq.q6">Posso receber reembolso?</h3>
+                    <p class="faq-answer" data-translate="faq.a6">
                         A política de reembolso varia. Discuta sua situação específica com o vendedor 
                         antes de finalizar a compra.
                     </p>
@@ -99,16 +105,16 @@
 
             <!-- Contact CTA -->
             <div class="faq-cta">
-                <h2>Ainda tem dúvidas?</h2>
-                <p>Entre em contato conosco no Discord para obter mais informações.</p>
-                <a href="how-to-buy.html" class="btn-primary">Como Comprar</a>
+                <h2 data-translate="faq.stillQuestions">Ainda tem dúvidas?</h2>
+                <p data-translate="faq.contactUs">Entre em contato conosco no Discord para obter mais informações.</p>
+                <a href="how-to-buy.html" class="btn-primary" data-translate="faq.howToBuyButton">Como Comprar</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 NyxStore. Todos os direitos reservados.</p>
+        <p data-translate="footer.rights">&copy; 2025 NyxStore. Todos os direitos reservados.</p>
     </footer>
 
     <script src="../js/main.js"></script>

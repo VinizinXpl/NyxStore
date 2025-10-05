@@ -27,10 +27,16 @@
 
             <!-- Navigation Links -->
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link active">Início</a></li>
-                <li><a href="pages/products.html" class="nav-link">Produtos</a></li>
-                <li><a href="pages/how-to-buy.html" class="nav-link">Como Comprar</a></li>
-                <li><a href="pages/faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="index.html" class="nav-link active" data-translate="nav.home">Início</a></li>
+                <li><a href="pages/products.html" class="nav-link" data-translate="nav.products">Produtos</a></li>
+                <li><a href="pages/how-to-buy.html" class="nav-link" data-translate="nav.howToBuy">Como Comprar</a></li>
+                <li><a href="pages/faq.html" class="nav-link" data-translate="nav.faq">FAQ</a></li>
+                <li>
+                    <button id="languageToggle" class="language-toggle" aria-label="Trocar idioma">
+                        <span class="flag-icon">🇧🇷</span>
+                        <span class="lang-text">PT</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -38,17 +44,17 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Bem Vindo(a) à Nyx Store</h1>
-            <p class="hero-subtitle">
+            <h1 class="hero-title" data-translate="hero.title">Bem Vindo(a) à Nyx Store</h1>
+            <p class="hero-subtitle" data-translate="hero.subtitle">
                 Encontre assinaturas e produtos permanentes para seus jogos favoritos. Qualidade garantida e suporte dedicado.
             </p>
-            <a href="pages/products.html" class="cta-button">Ver Produtos</a>
+            <a href="pages/products.html" class="cta-button" data-translate="hero.cta">Ver Produtos</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 NyxStore. Todos os direitos reservados.</p>
+        <p data-translate="footer.rights">&copy; 2025 NyxStore. Todos os direitos reservados.</p>
     </footer>
 
     <script src="js/main.js"></script>

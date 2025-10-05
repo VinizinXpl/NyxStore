@@ -249,6 +249,273 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================
+// LANGUAGE TRANSLATION SYSTEM
+// ========================================
+const translations = {
+    pt: {
+        currency: 'R$',
+        nav: {
+            home: 'Início',
+            products: 'Produtos',
+            howToBuy: 'Como Comprar',
+            faq: 'FAQ'
+        },
+        hero: {
+            title: 'Bem Vindo(a) à Nyx Store',
+            subtitle: 'Encontre assinaturas e produtos permanentes para seus jogos favoritos. Qualidade garantida e suporte dedicado.',
+            cta: 'Ver Produtos'
+        },
+        products: {
+            title: 'Nossos Produtos',
+            subscription: 'Assinatura',
+            permanent: 'Permanente',
+            buyButton: 'Comprar',
+            days3: '3 dias',
+            days7: '7 dias',
+            days30: '30 dias',
+            permanentLabel: 'Permanente',
+            unicoreDesc: 'Hack Para Genshin Impact',
+            uniwavesDesc: 'Hack Para Wuthering Waves',
+            shikaBetaDesc: 'Hack Genshin Impact - Necessário uso do Slash Bypass (Caso contrário o risco de banimento é quase certo)',
+            shikaAlphaDesc: 'Hack Genshin Impact - Necessário uso do Slash Bypass (Caso contrário o risco de banimento é quase certo)',
+            slashBypassDesc: 'Bypass para Shika Free/Beta/Alpha',
+            kittenwavesDesc: 'Hack para Wuthering Waves',
+            unizoneDesc: 'Hack para Zenless Zone Zero'
+        },
+        howToBuy: {
+            title: 'Como Comprar',
+            selectedProduct: 'Produto Selecionado',
+            product: 'Produto',
+            duration: 'Duração',
+            type: 'Tipo',
+            permanentNote: 'Produto Permanente (sem expiração)',
+            seller: 'Vendedor',
+            sellerRole: 'Proprietário da NyxStore',
+            finalizing: 'Finalizando a Compra',
+            instructions: 'Para finalizar sua compra, entre em contato comigo no Discord:',
+            discord: 'Discord',
+            required: 'Ao entrar em contato, forneça:',
+            reqItem1: 'O produto que deseja comprar',
+            reqItem2: 'A duração selecionada (se aplicável)',
+            reqItem3: 'Seu método de pagamento preferido',
+            enterServer: 'Entrar no Servidor',
+            viewFaq: 'Ver FAQ',
+            backToProducts: '← Voltar aos Produtos'
+        },
+        faq: {
+            title: 'Perguntas Frequentes',
+            q1: 'Onde posso comprar os produtos?',
+            a1: 'Todos os produtos são adquiridos através de contato direto no Discord. Visite a página "Como Comprar" para instruções detalhadas.',
+            q2: 'Existem riscos ao usar esses produtos?',
+            a2: 'O uso de hacks e bypasses sempre envolve riscos, incluindo possível banimento. Use por sua conta e risco.',
+            q3: 'Existe algum tutorial disponível?',
+            a3: 'Sim, após a compra você receberá instruções completas de instalação e uso. Suporte adicional está disponível no servidor Discord.',
+            q4: 'Qual é a diferença entre produtos de subscrição e permanentes?',
+            a4: 'Produtos de subscrição têm prazo definido (3, 7 ou 30 dias), enquanto produtos permanentes não expiram e são seus para sempre após a compra.',
+            q5: 'Quais métodos de pagamento são aceitos?',
+            a5: 'Os métodos de pagamento aceitos serão discutidos diretamente com o vendedor no Discord. Entre em contato para mais informações.',
+            q6: 'Posso receber reembolso?',
+            a6: 'A política de reembolso varia. Discuta sua situação específica com o vendedor antes de finalizar a compra.',
+            stillQuestions: 'Ainda tem dúvidas?',
+            contactUs: 'Entre em contato conosco no Discord para obter mais informações.',
+            howToBuyButton: 'Como Comprar'
+        },
+        footer: {
+            rights: '© 2025 NyxStore. Todos os direitos reservados.'
+        }
+    },
+    en: {
+        currency: 'USD',
+        nav: {
+            home: 'Home',
+            products: 'Products',
+            howToBuy: 'How to Buy',
+            faq: 'FAQ'
+        },
+        hero: {
+            title: 'Welcome to Nyx Store',
+            subtitle: 'Find subscriptions and permanent products for your favorite games. Guaranteed quality and dedicated support.',
+            cta: 'View Products'
+        },
+        products: {
+            title: 'Our Products',
+            subscription: 'Subscription',
+            permanent: 'Permanent',
+            buyButton: 'Buy',
+            days3: '3 days',
+            days7: '7 days',
+            days30: '30 days',
+            permanentLabel: 'Permanent',
+            unicoreDesc: 'Hack For Genshin Impact',
+            uniwavesDesc: 'Hack For Wuthering Waves',
+            shikaBetaDesc: 'Genshin Impact Hack - Slash Bypass required (Otherwise ban risk is almost certain)',
+            shikaAlphaDesc: 'Genshin Impact Hack - Slash Bypass required (Otherwise ban risk is almost certain)',
+            slashBypassDesc: 'Bypass for Shika Free/Beta/Alpha',
+            kittenwavesDesc: 'Hack for Wuthering Waves',
+            unizoneDesc: 'Hack for Zenless Zone Zero'
+        },
+        howToBuy: {
+            title: 'How to Buy',
+            selectedProduct: 'Selected Product',
+            product: 'Product',
+            duration: 'Duration',
+            type: 'Type',
+            permanentNote: 'Permanent Product (no expiration)',
+            seller: 'Seller',
+            sellerRole: 'NyxStore Owner',
+            finalizing: 'Completing Your Purchase',
+            instructions: 'To complete your purchase, contact me on Discord:',
+            discord: 'Discord',
+            required: 'When contacting, please provide:',
+            reqItem1: 'The product you want to buy',
+            reqItem2: 'The selected duration (if applicable)',
+            reqItem3: 'Your preferred payment method',
+            enterServer: 'Join Server',
+            viewFaq: 'View FAQ',
+            backToProducts: '← Back to Products'
+        },
+        faq: {
+            title: 'Frequently Asked Questions',
+            q1: 'Where can I buy the products?',
+            a1: 'All products are purchased through direct Discord contact. Visit the "How to Buy" page for detailed instructions.',
+            q2: 'Are there any risks in using these products?',
+            a2: 'Using hacks and bypasses always involves risks, including possible bans. Use at your own risk.',
+            q3: 'Is there a tutorial available?',
+            a3: 'Yes, after purchase you will receive complete installation and usage instructions. Additional support is available on the Discord server.',
+            q4: 'What is the difference between subscription and permanent products?',
+            a4: 'Subscription products have a defined period (3, 7 or 30 days), while permanent products do not expire and are yours forever after purchase.',
+            q5: 'What payment methods are accepted?',
+            a5: 'Accepted payment methods will be discussed directly with the seller on Discord. Contact for more information.',
+            q6: 'Can I get a refund?',
+            a6: 'Refund policy varies. Discuss your specific situation with the seller before completing the purchase.',
+            stillQuestions: 'Still have questions?',
+            contactUs: 'Contact us on Discord for more information.',
+            howToBuyButton: 'How to Buy'
+        },
+        footer: {
+            rights: '© 2025 NyxStore. All rights reserved.'
+        }
+    }
+};
+
+// Get current language from localStorage or default to Portuguese
+let currentLanguage = localStorage.getItem('nyxstore-language') || 'pt';
+
+// Function to change language
+function changeLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('nyxstore-language', lang);
+    
+    // Update flag only (no text)
+    const flagIcon = document.querySelector('.flag-icon');
+    const langText = document.querySelector('.lang-text');
+    
+    if (flagIcon) {
+        flagIcon.textContent = lang === 'pt' ? '🇧🇷' : '🇺🇸';
+    }
+    
+    // Hide the lang text element
+    if (langText) {
+        langText.style.display = 'none';
+    }
+    
+    // Translate all elements with data-translate
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        const keys = key.split('.');
+        let translation = translations[lang];
+        
+        keys.forEach(k => {
+            translation = translation[k];
+        });
+        
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+    
+    // Update currency and convert prices
+    // Exchange rate: Current rate 1 USD = 5.34 BRL
+    const BRL_TO_USD = 1 / 5.34; // 1 BRL = 0.1873 USD (approximately)
+    const USD_TO_BRL = 5.34; // 1 USD = 5.34 BRL
+    
+    document.querySelectorAll('.price').forEach(priceElement => {
+        const text = priceElement.textContent.trim();
+        
+        if (lang === 'en') {
+            // Convert R$ to USD
+            if (text.startsWith('R$')) {
+                // Extract the numeric value
+                const brlValue = text.replace('R$', '').replace(',', '.').trim();
+                const numValue = parseFloat(brlValue);
+                
+                if (!isNaN(numValue)) {
+                    const usdValue = (numValue * BRL_TO_USD).toFixed(2);
+                    priceElement.textContent = `USD ${usdValue}`;
+                    // Store original BRL value as data attribute
+                    priceElement.setAttribute('data-brl', text);
+                }
+            }
+        } else {
+            // Convert back to R$ or restore original
+            if (text.startsWith('USD')) {
+                // Check if we have the original BRL value stored
+                const originalBRL = priceElement.getAttribute('data-brl');
+                
+                if (originalBRL) {
+                    priceElement.textContent = originalBRL;
+                } else {
+                    // Convert USD to BRL
+                    const usdValue = text.replace('USD', '').trim();
+                    const numValue = parseFloat(usdValue);
+                    
+                    if (!isNaN(numValue)) {
+                        const brlValue = (numValue * USD_TO_BRL).toFixed(2).replace('.', ',');
+                        priceElement.textContent = `R$ ${brlValue}`;
+                    }
+                }
+            }
+        }
+    });
+    
+    // Update product types
+    document.querySelectorAll('.product-type').forEach(typeElement => {
+        const currentText = typeElement.textContent.trim();
+        if (lang === 'en') {
+            if (currentText === 'Assinatura') typeElement.textContent = 'Subscription';
+            if (currentText === 'Permanente') typeElement.textContent = 'Permanent';
+        } else {
+            if (currentText === 'Subscription') typeElement.textContent = 'Assinatura';
+            if (currentText === 'Permanent') typeElement.textContent = 'Permanente';
+        }
+    });
+    
+    // Update navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach((link, index) => {
+        if (index === 0) link.textContent = translations[lang].nav.home;
+        if (index === 1) link.textContent = translations[lang].nav.products;
+        if (index === 2) link.textContent = translations[lang].nav.howToBuy;
+        if (index === 3) link.textContent = translations[lang].nav.faq;
+    });
+}
+
+// Language toggle button event listener
+document.addEventListener('DOMContentLoaded', function() {
+    const languageToggle = document.getElementById('languageToggle');
+    
+    if (languageToggle) {
+        // Set initial language
+        changeLanguage(currentLanguage);
+        
+        languageToggle.addEventListener('click', function() {
+            const newLang = currentLanguage === 'pt' ? 'en' : 'pt';
+            changeLanguage(newLang);
+        });
+    }
+});
+
+// ========================================
 // CONSOLE LOG (for debugging - remove in production)
 // ========================================
 console.log('NyxStore - Website loaded successfully');
