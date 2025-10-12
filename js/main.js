@@ -99,6 +99,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Store product information in sessionStorage
             sessionStorage.setItem('selectedProduct', productName);
             sessionStorage.setItem('selectedProductType', productType);
+
+            if(productName === 'Addict') {
+                updateSelectedProductDurations(['1 dia', '3 dias', '7 dias', '30 dias']);
+            } else {
+                updateSelectedProductDurations(['2 dias', '7 dias', '30 dias']);
+            }
             
             // Get price options for subscription products
             if (productType === 'subscription') {
@@ -119,6 +125,13 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Navigate to how-to-buy page
             window.location.href = 'how-to-buy.html';
+
+            function updateSelectedProductDurations(durations) {
+                const durationElements = document.querySelectorAll('#selectedProduct .duration');
+                durationElements.forEach((element, index) => {
+                    element.textContent = durations[index] || '';
+                });
+            }
         });
     });
 });
@@ -216,19 +229,10 @@ function validateForm(form) {
 // UTILITY: Clear Session Storage on Home Page
 // ========================================
 document.addEventListener('DOMContentLoaded', function() {
-    // Clear product selection when returning to home page
-    if (window.location.pathname.endsWith('index.html') || 
-        window.location.pathname === '/' ||
-        window.location.pathname.endsWith('/')) {
-        
-        // Only clear if user navigated to home (not from product click)
-        const fromNavigation = document.referrer.includes('how-to-buy');
-        if (fromNavigation) {
-            sessionStorage.removeItem('selectedProduct');
-            sessionStorage.removeItem('selectedProductType');
-            sessionStorage.removeItem('priceOptions');
-        }
-    }
+    // Clear product selection on every page load
+    sessionStorage.removeItem('selectedProduct');
+    sessionStorage.removeItem('selectedProductType');
+    sessionStorage.removeItem('priceOptions');
 });
 
 // ========================================
@@ -270,6 +274,7 @@ const translations = {
             subscription: 'Assinatura',
             permanent: 'Permanente',
             buyButton: 'Comprar',
+            day1: '1 dia',
             days3: '3 dias',
             days7: '7 dias',
             days30: '30 dias',
@@ -280,7 +285,8 @@ const translations = {
             shikaAlphaDesc: 'Hack Genshin Impact - Necessário uso do Slash Bypass (Caso contrário o risco de banimento é quase certo)',
             slashBypassDesc: 'Bypass para Shika Free/Beta/Alpha',
             kittenwavesDesc: 'Hack para Wuthering Waves',
-            unizoneDesc: 'Hack para Zenless Zone Zero'
+            unizoneDesc: 'Hack para Zenless Zone Zero',
+            antiAddictDesc: 'Hack para Genshin Impact'
         },
         howToBuy: {
             title: 'Como Comprar',
@@ -342,6 +348,7 @@ const translations = {
             subscription: 'Subscription',
             permanent: 'Permanent',
             buyButton: 'Buy',
+            day1: '1 day',
             days3: '3 days',
             days7: '7 days',
             days30: '30 days',
@@ -352,7 +359,8 @@ const translations = {
             shikaAlphaDesc: 'Genshin Impact Hack - Slash Bypass required (Otherwise ban risk is almost certain)',
             slashBypassDesc: 'Bypass for Shika Free/Beta/Alpha',
             kittenwavesDesc: 'Hack for Wuthering Waves',
-            unizoneDesc: 'Hack for Zenless Zone Zero'
+            unizoneDesc: 'Hack for Zenless Zone Zero',
+            antiAddictDesc: 'Hack for Genshin Impact'
         },
         howToBuy: {
             title: 'How to Buy',
@@ -436,8 +444,8 @@ function changeLanguage(lang) {
     
     // Update currency and convert prices
     // Exchange rate: Current rate 1 USD = 5.34 BRL
-    const BRL_TO_USD = 1 / 5.34; // 1 BRL = 0.1873 USD (approximately)
-    const USD_TO_BRL = 5.34; // 1 USD = 5.34 BRL
+    const BRL_TO_USD = 1 / 5.53; // 1 BRL = 0.1873 USD (approximately)
+    const USD_TO_BRL = 5.53; // 1 USD = 5.34 BRL
     
     document.querySelectorAll('.price').forEach(priceElement => {
         const text = priceElement.textContent.trim();
