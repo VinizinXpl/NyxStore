@@ -441,6 +441,9 @@ function changeLanguage(lang) {
             element.textContent = translation;
         }
     });
+
+    // Dispatch event to notify other components (like product modal) of language change
+    window.dispatchEvent(new Event('languageChanged'));
     
     // Update currency and convert prices
     // Exchange rate: Current rate 1 USD = 5.34 BRL
