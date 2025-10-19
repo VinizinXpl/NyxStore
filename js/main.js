@@ -328,6 +328,9 @@ const translations = {
         },
         footer: {
             rights: '© 2025 NyxStore. Todos os direitos reservados.'
+        },
+        modal: {
+            features: 'Funcionalidades:'
         }
     },
     en: {
@@ -402,6 +405,9 @@ const translations = {
         },
         footer: {
             rights: '© 2025 NyxStore. All rights reserved.'
+        },
+        modal: {
+            features: 'Features:'
         }
     }
 };
@@ -446,9 +452,9 @@ function changeLanguage(lang) {
     window.dispatchEvent(new Event('languageChanged'));
     
     // Update currency and convert prices
-    // Exchange rate: Current rate 1 USD = 5.34 BRL
-    const BRL_TO_USD = 1 / 5.53; // 1 BRL = 0.1873 USD (approximately)
-    const USD_TO_BRL = 5.53; // 1 USD = 5.34 BRL
+    // Exchange rate: Current rate 1 USD = 5.41 BRL
+    const BRL_TO_USD = 1 / 5.41; // 1 BRL = 0.1845 USD (approximately)
+    const USD_TO_BRL = 5.41; // 1 USD = 5.41 BRL
     
     document.querySelectorAll('.price').forEach(priceElement => {
         const text = priceElement.textContent.trim();

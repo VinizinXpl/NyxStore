@@ -31,6 +31,56 @@ const productNames = {
     }
 };
 
+// Category names translations
+const categoryTranslations = {
+    pt: {
+        // Generic/English to Portuguese
+        'Player': 'Jogador',
+        'World': 'Mundo',
+        'Teleport': 'Teleporte',
+        'Visual': 'Visual',
+        'Visuals': 'Visuais',
+        'Misc': 'Misc',
+        'Info': 'Info',
+        'Combat': 'Combate',
+        'Teleports': 'Teleportes',
+        'Utility': 'Utilidade',
+        'Interactive Map': 'Mapa Interativo',
+        // Portuguese entries (to keep consistency)
+        'Jogador': 'Jogador',
+        'Mundo': 'Mundo',
+        'Teleporte': 'Teleporte',
+        'Visuais': 'Visuais',
+        'Combate': 'Combate',
+        'Teleportes': 'Teleportes',
+        'Utilidade': 'Utilidade',
+        'Mapa Interativo': 'Mapa Interativo'
+    },
+    en: {
+        // Portuguese to English
+        'Jogador': 'Player',
+        'Mundo': 'World',
+        'Teleporte': 'Teleport',
+        'Visuais': 'Visuals',
+        'Combate': 'Combat',
+        'Teleportes': 'Teleports',
+        'Utilidade': 'Utility',
+        'Mapa Interativo': 'Interactive Map',
+        // English entries (already in English, keep as is)
+        'Player': 'Player',
+        'World': 'World',
+        'Teleport': 'Teleport',
+        'Visual': 'Visuals',
+        'Visuals': 'Visuals',
+        'Misc': 'Misc',
+        'Info': 'Info',
+        'Combat': 'Combat',
+        'Teleports': 'Teleports',
+        'Utility': 'Utility',
+        'Interactive Map': 'Interactive Map'
+    }
+};
+
 // Product Features Translations
 const productTranslations = {
     pt: {
@@ -661,6 +711,9 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('modalProductDescription').textContent = description;
             document.getElementById('modalProductImage').src = imageSrc;
 
+            // Update features title with current language
+            updateFeaturesTitle(currentLang);
+
             // Check if product has categorized features
             if (productTranslations[currentLang][productName]) {
                 displayCategorizedFeatures(productName);
@@ -715,7 +768,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const button = document.createElement('button');
             button.className = 'category-filter-btn';
             if (index === 0) button.classList.add('active');
-            button.textContent = category;
+            // Use translated category name if available
+            const translatedCategory = categoryTranslations[language][category] || category;
+            button.textContent = translatedCategory;
             button.dataset.category = category;
 
             button.addEventListener('click', function() {
@@ -778,9 +833,24 @@ document.addEventListener('DOMContentLoaded', function() {
             const translatedName = productNames[currentLang][originalProductName] || originalProductName;
             document.getElementById('modalProductName').textContent = translatedName;
             
+            // Update the features title based on language
+            updateFeaturesTitle(currentLang);
+            
             if (productTranslations[currentLang][originalProductName]) {
                 displayCategorizedFeatures(originalProductName);
             }
         }
     });
+
+    // Function to update features title based on language
+    function updateFeaturesTitle(language) {
+        const featuresTitle = document.getElementById('featuresTitle');
+        if (featuresTitle) {
+            if (language === 'en') {
+                featuresTitle.textContent = 'Features:';
+            } else {
+                featuresTitle.textContent = 'Funcionalidades:';
+            }
+        }
+    }
 });
