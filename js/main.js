@@ -452,10 +452,10 @@ function changeLanguage(lang) {
     window.dispatchEvent(new Event('languageChanged'));
     
     // Update currency and convert prices
-    // Exchange rate: Current rate 1 USD = 5.41 BRL
-    const BRL_TO_USD = 1 / 5.41; // 1 BRL = 0.1845 USD (approximately)
-    const USD_TO_BRL = 5.41; // 1 USD = 5.41 BRL
-    
+    // Exchange rate: Current rate 1 USD = 5.39 BRL
+    const BRL_TO_USD = 1 / 5.38; // 1 BRL = 0.1850 USD (approximately)
+    const USD_TO_BRL = 5.38; // 1 USD = 5.39 BRL
+
     document.querySelectorAll('.price').forEach(priceElement => {
         const text = priceElement.textContent.trim();
         
