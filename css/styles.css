@@ -61,7 +61,10 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: var(--color-light-2);
-    background: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-2) 50%, var(--color-dark-3) 100%);
+    background: 
+        linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(45, 45, 45, 0.85) 50%, rgba(64, 64, 64, 0.85) 100%),
+        url('../img/NyxCommunity.png') center/cover fixed;
+    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -373,6 +376,62 @@ body {
     margin-top: var(--spacing-xl);
 }
 
+/* Games Grid - 4 game boxes */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game-box {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    background: linear-gradient(135deg, var(--color-dark-2) 0%, var(--color-dark-1) 100%);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--color-dark-3);
+}
+
+.game-box:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border-color: var(--color-mid-light);
+}
+
+.game-box-content {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+.game-placeholder {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+    display: block;
+}
+
+.game-box h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    letter-spacing: 0.5px;
+}
+
 /* Product Cards */
 .product-card {
     background: linear-gradient(135deg, var(--color-dark-2) 0%, var(--color-dark-1) 100%);
@@ -491,6 +550,182 @@ body {
     .section-title {
         font-size: 2rem;
     }
+}
+
+/* ========================================
+   GAME PAGES SECTION
+   ======================================== */
+.game-section {
+    min-height: 80vh;
+    padding: var(--spacing-xl) 0;
+    flex: 1;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.game-title {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    letter-spacing: 1px;
+}
+
+.back-link {
+    color: var(--color-light-1);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    transition: color var(--transition-fast);
+}
+
+.back-link:hover {
+    color: var(--color-white);
+}
+
+.game-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.game-product {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-dark-2) 0%, var(--color-dark-1) 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-dark-3);
+    transition: all var(--transition-normal);
+    overflow: hidden;
+}
+
+.product-header,
+.product-description,
+.product-options,
+.buy-btn {
+    position: relative;
+    z-index: 1;
+}
+
+.game-product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border-color: var(--color-mid-dark);
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.game-product h3 {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.product-header .product-type {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--color-mid-dark);
+    color: var(--color-white);
+    font-size: 0.85rem;
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-sm);
+}
+
+.product-description {
+    color: var(--color-light-1);
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+}
+
+.product-options {
+    background: var(--color-dark-3);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.product-options .option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--color-mid-dark);
+}
+
+.product-options .option:last-child {
+    border-bottom: none;
+}
+
+.option .duration {
+    color: var(--color-light-1);
+    font-size: 0.9rem;
+}
+
+.option .price {
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    font-size: 1rem;
+}
+
+.buy-btn {
+    display: inline-block;
+    width: 100%;
+    padding: var(--spacing-sm);
+    background: var(--color-white);
+    color: var(--color-black);
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-bold);
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.buy-btn:hover {
+    background: var(--color-light-3);
+    transform: scale(1.02);
+}
+
+.empty-message {
+    text-align: center;
+    padding: var(--spacing-xxl);
+    background: linear-gradient(135deg, var(--color-dark-2) 0%, var(--color-dark-1) 100%);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-dark-3);
+}
+
+.empty-message p {
+    color: var(--color-light-1);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.empty-message .cta-button {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--color-white);
+    color: var(--color-black);
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.empty-message .cta-button:hover {
+    background: var(--color-light-3);
 }
 
 /* ========================================
