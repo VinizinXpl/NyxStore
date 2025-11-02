@@ -282,7 +282,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: var(--spacing-xl) var(--spacing-sm);
-    background: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-2) 50%, var(--color-dark-3) 100%);
+    background: transparent;
     flex: 1;
 }
 
@@ -345,7 +345,7 @@ body {
    ======================================== */
 .products-section {
     padding: var(--spacing-xxl) var(--spacing-sm);
-    background: linear-gradient(180deg, var(--color-dark-3) 0%, var(--color-dark-1) 100%);
+    background: transparent;
     flex: 1;
 }
 
@@ -390,11 +390,10 @@ body {
 .game-box {
     text-decoration: none;
     color: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 200px;
-    background: linear-gradient(135deg, var(--color-dark-2) 0%, var(--color-dark-1) 100%);
+    display: block;
+    position: relative;
+    min-height: 250px;
+    background: var(--color-dark-1);
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: all var(--transition-normal);
@@ -403,33 +402,62 @@ body {
 }
 
 .game-box:hover {
-    transform: translateY(-8px) scale(1.05);
+    transform: translateY(-8px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     border-color: var(--color-mid-light);
 }
 
 .game-box-content {
-    text-align: center;
+    position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: var(--spacing-md);
+    min-height: 250px;
 }
 
 .game-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 4rem;
-    margin-bottom: var(--spacing-md);
-    display: block;
+    overflow: hidden;
+}
+
+.game-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: all var(--transition-normal);
+}
+
+.game-box:hover .game-placeholder img {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 .game-box h3 {
-    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
     font-weight: var(--font-weight-bold);
     color: var(--color-white);
     letter-spacing: 0.5px;
+    text-align: center;
+    z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    width: 90%;
+    transition: all var(--transition-normal);
+}
+
+.game-box:hover h3 {
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 /* Product Cards */
@@ -599,10 +627,28 @@ body {
     position: relative;
     background: linear-gradient(135deg, var(--color-dark-2) 0%, var(--color-dark-1) 100%);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     border: 1px solid var(--color-dark-3);
     transition: all var(--transition-normal);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+}
+
+.game-product::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-image: var(--product-bg);
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    opacity: 0.25;
+    z-index: 0;
 }
 
 .product-header,
@@ -610,93 +656,116 @@ body {
 .product-options,
 .buy-btn {
     position: relative;
-    z-index: 1;
-}
-
-.game-product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    border-color: var(--color-mid-dark);
+    z-index: 2;
 }
 
 .product-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    margin-top: 70px;
+    padding-top: 8px;
 }
 
 .game-product h3 {
     color: var(--color-white);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0;
+    font-weight: var(--font-weight-bold);
 }
 
 .product-header .product-type {
     display: inline-block;
-    padding: 4px 12px;
+    padding: 3px 10px;
     background: var(--color-mid-dark);
     color: var(--color-white);
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: var(--font-weight-medium);
     border-radius: var(--radius-sm);
 }
 
 .product-description {
     color: var(--color-light-1);
-    margin-bottom: var(--spacing-md);
-    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.85rem;
+    line-height: 1.4;
 }
 
 .product-options {
     background: var(--color-dark-3);
     border-radius: var(--radius-md);
-    padding: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    padding: 10px 12px;
+    margin-bottom: auto;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4px;
 }
 
 .product-options .option {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-xs) 0;
+    padding: 8px 0;
     border-bottom: 1px solid var(--color-mid-dark);
+    font-size: 0.85rem;
 }
 
 .product-options .option:last-child {
     border-bottom: none;
 }
 
+/* Estilo específico para produtos com apenas uma opção */
+.product-options.single-option {
+    padding: 4px 12px;
+    min-height: 0;
+    flex-grow: 0;
+    justify-content: center;
+}
+
+.product-options.single-option .option {
+    padding: 2px 0;
+}
+
 .option .duration {
     color: var(--color-light-1);
-    font-size: 0.9rem;
+    font-size: 0.75rem;
 }
 
 .option .price {
     color: var(--color-white);
     font-weight: var(--font-weight-bold);
-    font-size: 1rem;
+    font-size: 0.80rem;
 }
 
 .buy-btn {
     display: inline-block;
     width: 100%;
-    padding: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
     background: var(--color-white);
     color: var(--color-black);
     border: none;
     border-radius: var(--radius-md);
     font-weight: var(--font-weight-bold);
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
     transition: all var(--transition-fast);
+    margin-top: var(--spacing-sm);
 }
 
 .buy-btn:hover {
     background: var(--color-light-3);
     transform: scale(1.02);
+}
+
+.game-product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border-color: var(--color-mid-dark);
 }
 
 .empty-message {
@@ -733,7 +802,7 @@ body {
    ======================================== */
 .how-to-buy-section {
     min-height: 80vh;
-    background: linear-gradient(135deg, var(--color-dark-1) 0%, var(--color-dark-2) 100%);
+    background: transparent;
     flex: 1;
 }
 
@@ -964,7 +1033,7 @@ body {
    ======================================== */
 .faq-section {
     min-height: 80vh;
-    background: linear-gradient(135deg, var(--color-dark-1) 0%, var(--color-dark-2) 100%);
+    background: transparent;
     flex: 1;
 }
 
