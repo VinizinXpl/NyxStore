@@ -110,26 +110,29 @@ document.addEventListener('DOMContentLoaded', function() {
     images.forEach(img => imageObserver.observe(img));
 
     // ===== ANIMATE ON SCROLL =====
-    const animateElements = document.querySelectorAll('.game-product, .game-box, .faq-item, .profile-card');
+    const animateElements = document.querySelectorAll('.game-product, .game-box, .faq-item, .profile-card, .purchase-instructions, .seller-profile');
     
     const scrollObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '0';
                 entry.target.style.transform = 'translateY(30px)';
                 
+                // Delay escalonado para efeito cascata
+                const delay = index * 80;
+                
                 setTimeout(() => {
-                    entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    entry.target.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
-                }, 100);
+                }, delay);
                 
                 scrollObserver.unobserve(entry.target);
             }
         });
     }, {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -30px 0px'
     });
 
     animateElements.forEach(el => scrollObserver.observe(el));
@@ -193,20 +196,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
         let lastScroll = 0;
+        let ticking = false;
+        
         window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                navbar.style.background = 'rgba(0, 0, 0, 0.95)';
-                navbar.style.backdropFilter = 'blur(10px)';
-                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.8)';
-            } else {
-                navbar.style.background = 'linear-gradient(90deg, var(--color-black) 0%, var(--color-dark-1) 100%)';
-                navbar.style.backdropFilter = 'none';
-                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.5)';
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const currentScroll = window.pageYOffset;
+                    
+                    if (currentScroll > 80) {
+                        navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+                        navbar.style.backdropFilter = 'blur(15px)';
+                        navbar.style.webkitBackdropFilter = 'blur(15px)';
+                        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.8)';
+                        navbar.style.padding = '0.6rem 0';
+                    } else {
+                        navbar.style.background = 'linear-gradient(90deg, #000 0%, #1a1a1a 100%)';
+                        navbar.style.backdropFilter = 'blur(0px)';
+                        navbar.style.webkitBackdropFilter = 'blur(0px)';
+                        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.5)';
+                        navbar.style.padding = '1rem 0';
+                    }
+                    
+                    lastScroll = currentScroll;
+                    ticking = false;
+                });
+                ticking = true;
             }
-            
-            lastScroll = currentScroll;
         });
     }
 
@@ -236,13 +251,66 @@ document.addEventListener('DOMContentLoaded', function() {
     productOptions.forEach(option => {
         option.addEventListener('mouseenter', function() {
             this.style.transform = 'translateX(5px)';
-            this.style.background = 'rgba(255, 255, 255, 0.05)';
+            this.style.background = 'rgba(255, 255, 255, 0.08)';
+            this.style.borderRadius = '6px';
         });
 
         option.addEventListener('mouseleave', function() {
             this.style.transform = 'translateX(0)';
             this.style.background = 'transparent';
         });
+    });
+
+    // ===== PRICE ANIMATION =====
+    const prices = document.querySelectorAll('.price');
+    const priceObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'pulse 0.5s ease';
+                priceObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    prices.forEach(price => priceObserver.observe(price));
+
+    // ===== SMOOTH HOVER FOR IMAGES =====
+    const allImages = document.querySelectorAll('.game-placeholder img, .seller-photo');
+    allImages.forEach(img => {
+        img.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s ease';
+    });
+
+    // ===== SECTION TITLE ANIMATION =====
+    const sectionTitles = document.querySelectorAll('.section-title, .game-title, .page-title');
+    const titleObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '0';
+                entry.target.style.transform = 'translateY(-20px)';
+                
+                setTimeout(() => {
+                    entry.target.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, 100);
+                
+                titleObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    
+    sectionTitles.forEach(title => titleObserver.observe(title));
+
+    // ===== TOUCH FEEDBACK FOR MOBILE =====
+    const touchElements = document.querySelectorAll('.game-box, .game-product, .buy-btn, .btn-primary, .btn-secondary');
+    touchElements.forEach(el => {
+        el.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.98)';
+        }, { passive: true });
+        
+        el.addEventListener('touchend', function() {
+            this.style.transform = '';
+        }, { passive: true });
     });
 
     // ===== LOADING ANIMATION =====
