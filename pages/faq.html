@@ -1,114 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Perguntas Frequentes - NyxStore">
-    <title>FAQ - NyxStore</title>
+    <title>FAQ - Nyx Community</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <!-- Logo and Brand -->
-            <div class="nav-brand">
-                <!-- EDITABLE: Replace this image src with your shop logo -->
-                <img src="../img/C18.gif" alt="NyxStore Logo" class="logo">
-                <span class="brand-name">NyxStore</span>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <i class="fa-solid fa-moon"></i> Nyx Community
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Início</a>
+                <a href="how-to-buy.html">Como Comprar</a>
+                <a href="faq.html" class="active">FAQ</a>
             </div>
-
-            <!-- Hamburger Menu (Mobile) -->
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
             </button>
-
-            <!-- Navigation Links -->
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link" data-translate="nav.home">Início</a></li>
-                <li><a href="products.html" class="nav-link" data-translate="nav.products">Produtos</a></li>
-                <li><a href="how-to-buy.html" class="nav-link" data-translate="nav.howToBuy">Como Comprar</a></li>
-                <li><a href="faq.html" class="nav-link active" data-translate="nav.faq">FAQ</a></li>
-            </ul>
         </div>
     </nav>
 
+    <!-- Page Header -->
+    <header class="hero" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../img/NyxCommunity.png') no-repeat center center/cover; min-height: 60vh; display: flex; align-items: center;">
+        <div class="container hero-content">
+            <span class="badge" style="background: rgba(0,0,0,0.1); color: #000; border-color: rgba(0,0,0,0.2);">Suporte</span>
+            <h1 style="color: #000;">Perguntas <span class="text-gradient">Frequentes</span></h1>
+        </div>
+        <div class="hero-background">
+            <div class="glow glow-1" style="top: -50%; left: 50%;"></div>
+        </div>
+    </header>
+
     <!-- FAQ Content -->
-    <section class="faq-section">
-        <div class="container-narrow">
-            <h1 class="page-title" data-translate="faq.title">Perguntas Frequentes</h1>
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 16px;">
+                    <h3 style="color: #fff; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-cart-shopping" style="color: #6366f1;"></i> Onde comprar?
+                    </h3>
+                    <p style="color: #a1a1aa; line-height: 1.6;">Todos os produtos são adquiridos através de contato direto no nosso Discord ou seguindo as instruções na página "Como Comprar".</p>
+                </div>
 
-            <!-- FAQ Items -->
-            <div class="faq-list">
-                <!-- FAQ Item 1 -->
-                <article class="faq-item">
-                    <h3 class="faq-question" data-translate="faq.q1">Onde posso comprar os produtos?</h3>
-                    <p class="faq-answer" data-translate="faq.a1">
-                        Todos os produtos são adquiridos através de contato direto no Discord. 
-                        Visite a página "Como Comprar" para instruções detalhadas.
-                    </p>
-                </article>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 16px;">
+                    <h3 style="color: #fff; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-shield-halved" style="color: #6366f1;"></i> É seguro?
+                    </h3>
+                    <p style="color: #a1a1aa; line-height: 1.6;">Sim, nossos produtos são testados rigorosamente. No entanto, sempre recomendamos o uso com moderação e responsabilidade.</p>
+                </div>
 
-                <!-- FAQ Item 2 -->
-                <article class="faq-item">
-                    <h3 class="faq-question" data-translate="faq.q2">Existem riscos ao usar esses produtos?</h3>
-                    <p class="faq-answer" data-translate="faq.a2">
-                        O uso de hacks sempre envolve riscos, incluindo possível banimento. 
-                        Use por sua conta e risco.
-                    </p>
-                </article>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 16px;">
+                    <h3 style="color: #fff; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-clock" style="color: #6366f1;"></i> Tempo de entrega?
+                    </h3>
+                    <p style="color: #a1a1aa; line-height: 1.6;">A entrega é imediata após a confirmação do pagamento. Você receberá sua chave de licença instantaneamente.</p>
+                </div>
 
-                <!-- FAQ Item 3 -->
-                <article class="faq-item">
-                    <h3 class="faq-question" data-translate="faq.q3">Existe algum tutorial disponível?</h3>
-                    <p class="faq-answer" data-translate="faq.a3">
-                        Sim, após a compra você receberá instruções completas de instalação e uso. 
-                        Suporte adicional está disponível no servidor Discord.
-                    </p>
-                </article>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 16px;">
+                    <h3 style="color: #fff; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-headset" style="color: #6366f1;"></i> Tem suporte?
+                    </h3>
+                    <p style="color: #a1a1aa; line-height: 1.6;">Sim! Oferecemos suporte 24/7 através do nosso servidor no Discord para ajudar com instalação e configuração.</p>
+                </div>
 
-                <!-- FAQ Item 4 -->
-                <article class="faq-item">
-                    <h3 class="faq-question" data-translate="faq.q4">Qual é a diferença entre produtos de subscrição e permanentes?</h3>
-                    <p class="faq-answer" data-translate="faq.a4">
-                        Produtos de subscrição têm prazo definido (3, 7 ou 30 dias), enquanto produtos 
-                        permanentes não expiram e são seus para sempre após a compra.
-                    </p>
-                </article>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 16px;">
+                    <h3 style="color: #fff; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-rotate" style="color: #6366f1;"></i> Atualizações?
+                    </h3>
+                    <p style="color: #a1a1aa; line-height: 1.6;">As atualizações são automáticas ou notificadas via Discord. Mantemos nossos produtos sempre atualizados.</p>
+                </div>
 
-                <!-- FAQ Item 5 -->
-                <article class="faq-item">
-                    <h3 class="faq-question" data-translate="faq.q5">Quais métodos de pagamento são aceitos?</h3>
-                    <p class="faq-answer" data-translate="faq.a5">
-                        Os métodos de pagamento aceitos serão discutidos diretamente com o vendedor 
-                        no Discord. Entre em contato para mais informações.
-                    </p>
-                </article>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 16px;">
+                    <h3 style="color: #fff; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-ban" style="color: #6366f1;"></i> Reembolso?
+                    </h3>
+                    <p style="color: #a1a1aa; line-height: 1.6;">Devido à natureza digital (chaves de licença), não oferecemos reembolso após a chave ter sido ativada, exceto em casos de defeito.</p>
+                </div>
 
-                <!-- FAQ Item 6 -->
-                <article class="faq-item">
-                    <h3 class="faq-question" data-translate="faq.q6">Posso receber reembolso?</h3>
-                    <p class="faq-answer" data-translate="faq.a6">
-                        A política de reembolso varia. Discuta sua situação específica com o vendedor 
-                        antes de finalizar a compra.
-                    </p>
-                </article>
-            </div>
-
-            <!-- Contact CTA -->
-            <div class="faq-cta">
-                <h2 data-translate="faq.stillQuestions">Ainda tem dúvidas?</h2>
-                <p data-translate="faq.contactUs">Entre em contato conosco no Discord para obter mais informações.</p>
-                <a href="how-to-buy.html" class="btn-primary" data-translate="faq.howToBuyButton">Como Comprar</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p data-translate="footer.rights">&copy; 2025 NyxStore. Todos os direitos reservados.</p>
+        <div class="container footer-content" style="justify-content: center; text-align: center;">
+            <div class="footer-brand">
+                <a href="#" class="logo"><i class="fa-solid fa-moon"></i> Nyx Community</a>
+                <p>Sua loja confiável para Cheats seguros!</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nyx Community. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>

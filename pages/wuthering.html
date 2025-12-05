@@ -1,83 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Produtos Wuthering Waves - NyxStore">
-    <title>Wuthering Waves - NyxStore</title>
+    <title>Wuthering Waves - Nyx Community</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <img src="../img/C18.gif" alt="NyxStore Logo" class="logo">
-                <span class="brand-name">NyxStore</span>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <i class="fa-solid fa-moon"></i> Nyx Community
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Início</a>
+                <a href="#" class="active">Wuthering Waves</a>
+                <a href="how-to-buy.html">Como Comprar</a>
+                <a href="faq.html">FAQ</a>
             </div>
-
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
             </button>
-
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Início</a></li>
-                <li><a href="products.html" class="nav-link">Produtos</a></li>
-                <li><a href="how-to-buy.html" class="nav-link">Como Comprar</a></li>
-                <li><a href="faq.html" class="nav-link">FAQ</a></li>
-            </ul>
         </div>
     </nav>
 
-    <section class="game-section">
-        <div class="container">
-            <div class="game-header">
-                <h2 class="game-title">Wuthering Waves</h2>
-                <a href="products.html" class="back-link">← Voltar aos Jogos</a>
-            </div>
+    <!-- Page Header -->
+    <header class="hero" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../img/NyxCommunity.png') no-repeat center center/cover; min-height: 60vh; display: flex; align-items: center;">
+        <div class="container hero-content">
+            <span class="badge" style="background: rgba(0,0,0,0.1); color: #000; border-color: rgba(0,0,0,0.2);">Categoria</span>
+            <h1 style="color: #000;">Wuthering <span class="text-gradient">Waves</span></h1>
+        </div>
+        <div class="hero-background">
+            <div class="glow glow-1" style="top: -50%; left: 50%;"></div>
+        </div>
+    </header>
 
-            <div class="game-products">
-                <!-- Product 1: Uniwaves -->
-                <div class="game-product" style="--product-bg: url('../img/UniWaves.png')">
-                    <div class="product-header">
-                        <h3>Uniwaves</h3>
-                        <span class="product-type">Assinatura</span>
+    <!-- Products Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="games-grid">
+                <!-- UniWaves -->
+                <div class="game-card">
+                    <div class="card-image">
+                        <img src="../img/UniWaves.png" alt="UniWaves" onerror="this.src='https://via.placeholder.com/400x250/1a1a1a/6366f1?text=UniWaves'">
                     </div>
-                    <p class="product-description">Menu Wuthering Waves</p>
-                    <div class="product-options">
-                        <div class="option">
-                            <span class="duration">2 dias</span>
-                            <span class="price">R$ 15,90</span>
+                    <div class="card-info">
+                        <h3>UniWaves</h3>
+                        
+                        <div class="product-options-list">
+                            <div class="option-item">
+                                <span class="option-name">UniWaves 2D</span>
+                                <span class="option-price">R$ 15.90</span>
+                            </div>
+                            <div class="option-item">
+                                <span class="option-name">UniWaves 7D</span>
+                                <span class="option-price">R$ 35.90</span>
+                            </div>
+                            <div class="option-item">
+                                <span class="option-name">UniWaves 30D</span>
+                                <span class="option-price">R$ 76.90</span>
+                            </div>
                         </div>
-                        <div class="option">
-                            <span class="duration">7 dias</span>
-                            <span class="price">R$ 35,90</span>
-                        </div>
-                        <div class="option">
-                            <span class="duration">30 dias</span>
-                            <span class="price">R$ 76,90</span>
+
+                        <div class="card-meta" style="margin-top: 15px;">
+                            <span class="stock-status in-stock"><i class="fa-solid fa-circle"></i> Em Estoque</span>
                         </div>
                     </div>
-                    <a href="how-to-buy.html" class="buy-btn">Comprar</a>
                 </div>
 
-                <!-- Product 2: Kittenwaves -->
-                <div class="game-product" style="--product-bg: url('../img/KittenWaves.png')">
-                    <div class="product-header">
-                        <h3>Kittenwaves</h3>
-                        <span class="product-type">Permanente</span>
+                <!-- KittenWaves -->
+                <div class="game-card">
+                    <div class="card-image">
+                        <img src="../img/KittenWaves.png" alt="KittenWaves" onerror="this.src='https://via.placeholder.com/400x250/1a1a1a/6366f1?text=KittenWaves'">
                     </div>
-                    <p class="product-description">Menu Kittenwaves</p>
-                    <div class="product-options single-option">
-                        <div class="option">
-                            <span class="duration">Permanente</span>
-                            <span class="price">R$ 149,90</span>
+                    <div class="card-info">
+                        <h3>KittenWaves</h3>
+                        
+                        <div class="product-options-list">
+                            <div class="option-item">
+                                <span class="option-name">KittenWaves (Lifetime)</span>
+                                <span class="option-price">R$ 139.90 </span>
+                            </div>
+                        </div>
+
+                        <div class="card-meta" style="margin-top: 15px;">
+                            <span class="stock-status in-stock"><i class="fa-solid fa-circle"></i> Em Estoque</span>
                         </div>
                     </div>
-                    <a href="how-to-buy.html" class="buy-btn">Comprar</a>
                 </div>
             </div>
         </div>
@@ -85,10 +97,17 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 NyxStore. Todos os direitos reservados.</p>
+        <div class="container footer-content" style="justify-content: center; text-align: center;">
+            <div class="footer-brand">
+                <a href="#" class="logo"><i class="fa-solid fa-moon"></i> Nyx Community</a>
+                <p>Sua loja confiável para Cheats seguros!</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nyx Community. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>
 </body>
-
 </html>

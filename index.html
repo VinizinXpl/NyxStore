@@ -1,56 +1,192 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NyxStore - Sua loja de produtos digitais e subscrições">
-    <title>NyxStore - Início</title>
+    <title>Nyx Community - Premium Gaming Accounts</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <!-- Logo and Brand -->
-            <div class="nav-brand">
-                <!-- EDITABLE: Replace this image src with your shop logo -->
-                <img src="img/C18.gif" alt="NyxStore Logo" class="logo">
-                <span class="brand-name">NyxStore</span>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="spinner"></div>
+            <p>Carregando Nyx Community...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-moon"></i> Nyx Community
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Início</a>
+                <a href="pages/how-to-buy.html">Como Comprar</a>
+                <a href="pages/faq.html">FAQ</a>
             </div>
-
-            <!-- Hamburger Menu (Mobile) -->
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
             </button>
-
-            <!-- Navigation Links -->
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link active" data-translate="nav.home">Início</a></li>
-                <li><a href="pages/products.html" class="nav-link" data-translate="nav.products">Produtos</a></li>
-                <li><a href="pages/how-to-buy.html" class="nav-link" data-translate="nav.howToBuy">Como Comprar</a></li>
-                <li><a href="pages/faq.html" class="nav-link" data-translate="nav.faq">FAQ</a></li>
-            </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title" data-translate="hero.title">Bem Vindo(a) à Nyx Store</h1>
-            <p class="hero-subtitle" data-translate="hero.subtitle">
-                Encontre aqui os melhores preços para seus cheats e bypass.
-            </p>
-            <a href="pages/products.html" class="cta-button" data-translate="hero.cta">Ver Produtos</a>
+    <header class="hero" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('img/NyxCommunity.png') no-repeat center center/cover; min-height: 100vh; display: flex; align-items: center;">
+        <div class="container hero-content">
+            <span class="badge" style="background: rgba(0,0,0,0.1); color: #000; border-color: rgba(0,0,0,0.2);">Cheats</span>
+            <h1 style="color: #000;">Nyx <span class="text-gradient">Community</span></h1>
+            
+            <div class="hero-buttons">
+                <a href="#games" class="btn-primary large">Ver Produtos <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+        </div>
+    </header>
+
+    <!-- Games Grid Section -->
+    <section id="games" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Jogos</h2>
+                <p>Escolha seu produto</p>
+            </div>
+
+            <div class="games-grid">
+                <!-- Genshin Impact -->
+                <a href="pages/genshin.html" class="game-card">
+                    <div class="card-image">
+                        <img src="https://images5.alphacoders.com/112/1123013.jpg" alt="Genshin Impact">
+                        <div class="overlay">
+                            <span class="btn-view">Ver produtos</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Genshin Impact</h3>
+                        <div class="card-meta">
+                            <span class="stock-status in-stock"><i class="fa-solid fa-circle"></i> Disponível</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Wuthering Waves -->
+                <a href="pages/wuthering.html" class="game-card">
+                    <div class="card-image">
+                        <img src="img/WutheringImage.jpg" alt="Wuthering Waves">
+                        <div class="overlay">
+                            <span class="btn-view">Ver produtos</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Wuthering Waves</h3>
+                        <div class="card-meta">
+                            <span class="stock-status in-stock"><i class="fa-solid fa-circle"></i> Disponível</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Zenless Zone Zero -->
+                <a href="pages/zenless.html" class="game-card">
+                    <div class="card-image">
+                        <img src="img/ZenlessZoneZeroImage.jpg" alt="Zenless Zone Zero">
+                        <div class="overlay">
+                            <span class="btn-view">Ver produtos</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Zenless Zone Zero</h3>
+                        <div class="card-meta">
+                            <span class="stock-status in-stock"><i class="fa-solid fa-circle"></i> Disponível</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Honkai: Star Rail -->
+                <a href="pages/honkai.html" class="game-card">
+                    <div class="card-image">
+                        <img src="img/HonkaiStarRail.png" alt="Honkai: Star Rail">
+                        <div class="overlay">
+                            <span class="btn-view">Ver produtos</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Honkai: Star Rail</h3>
+                        <div class="card-meta">
+                            <span class="stock-status in-stock"><i class="fa-solid fa-circle"></i> Disponível</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Duet Night Abyss 
+                <a href="#" class="game-card">
+                    <div class="card-image">
+                        <img src="https://images.alphacoders.com/115/1153229.jpg" alt="Duet Night Abyss">
+                        <div class="overlay">
+                            <span class="btn-view">Em Breve</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Duet Night Abyss</h3>
+                        <div class="card-meta">
+                            <span class="stock-status in-stock"><i class="fa-solid fa-circle"></i> Disponível</span>
+                        </div>
+                    </div>
+                </a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3>Entrega Automática</h3>
+                    <p>Receba seu cheat imediatamente após a confirmação do pagamento ou em até 24 horas.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Segurança Total</h3>
+                    <p>Todas os hacks são verificadas e possuem garantia de funcionamento.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3>Suporte 24/7</h3>
+                    <p>Nossa equipe está sempre pronta para ajudar com qualquer dúvida.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p data-translate="footer.rights">&copy; 2025 NyxStore. Todos os direitos reservados.</p>
+        <div class="container footer-content" style="justify-content: center; text-align: center;">
+            <div class="footer-brand">
+                <a href="#" class="logo"><i class="fa-solid fa-moon"></i> Nyx Community</a>
+                <p>Sua loja confiável para Cheats seguros!</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nyx Community. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

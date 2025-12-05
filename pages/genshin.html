@@ -1,135 +1,157 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Produtos Genshin Impact - NyxStore">
-    <title>Genshin Impact - NyxStore</title>
+    <title>Genshin Impact - Nyx Community</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <img src="../img/C18.gif" alt="NyxStore Logo" class="logo">
-                <span class="brand-name">NyxStore</span>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <i class="fa-solid fa-moon"></i> Nyx Community
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Início</a>
+                <a href="#" class="active">Genshin Impact</a>
+                <a href="how-to-buy.html">Como Comprar</a>
+                <a href="faq.html">FAQ</a>
             </div>
-
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
             </button>
-
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Início</a></li>
-                <li><a href="products.html" class="nav-link">Produtos</a></li>
-                <li><a href="how-to-buy.html" class="nav-link">Como Comprar</a></li>
-                <li><a href="faq.html" class="nav-link">FAQ</a></li>
-            </ul>
         </div>
     </nav>
 
-    <section class="game-section">
+    <!-- Page Header -->
+    <header class="hero" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../img/NyxCommunity.png') no-repeat center center/cover; min-height: 60vh; display: flex; align-items: center;">
+        <div class="container hero-content">
+            <span class="badge" style="background: rgba(0,0,0,0.1); color: #000; border-color: rgba(0,0,0,0.2);">Categoria</span>
+            <h1 style="color: #000;">Genshin <span class="text-gradient">Impact</span></h1>
+        </div>
+        <div class="hero-background">
+            <div class="glow glow-1" style="top: -50%; left: 50%;"></div>
+        </div>
+    </header>
+
+    <!-- Products Grid -->
+    <section class="section">
         <div class="container">
-            <div class="game-header">
-                <h2 class="game-title">Genshin Impact</h2>
-                <a href="products.html" class="back-link">← Voltar aos Jogos</a>
-            </div>
-
-            <div class="game-products">
-                <!-- Product 1: Unicore -->
-                <div class="game-product" style="--product-bg: url('../img/UniCore.png')">
-                    <div class="product-header">
+            <div class="games-grid">
+                <!-- Unicore -->
+                <div class="game-card">
+                    <div class="card-image">
+                        <img src="../img/UniCore.png" alt="Unicore" onerror="this.src='https://via.placeholder.com/400x250/1a1a1a/6366f1?text=Unicore'">
+                    </div>
+                    <div class="card-info">
                         <h3>Unicore</h3>
-                        <span class="product-type">Assinatura</span>
+                        
+                        <div class="product-options-list">
+                            <div class="option-item">
+                                <span class="option-name">Unicore 2D</span>
+                                <span class="option-price">R$ 15.90</span>
+                            </div>
+                            <div class="option-item">
+                                <span class="option-name">Unicore 7D</span>
+                                <span class="option-price">R$ 35.90</span>
+                            </div>
+                            <div class="option-item">
+                                <span class="option-name">Unicore 30D</span>
+                                <span class="option-price">R$ 71.90</span>
+                            </div>
+                        </div>
+
+                        <div class="card-meta" style="margin-top: 15px;">
+                            <span class="stock-status in-stock"><i class="fa-solid fa-circle"></i> Em Estoque</span>
+                        </div>
                     </div>
-                    <p class="product-description">Menu Genshin Impact</p>
-                    <div class="product-options">
-                        <div class="option">
-                            <span class="duration">2 dias</span>
-                            <span class="price">R$ 15,90</span>
-                        </div>
-                        <div class="option">
-                            <span class="duration">7 dias</span>
-                            <span class="price">R$ 35,90</span>
-                        </div>
-                        <div class="option">
-                            <span class="duration">30 dias</span>
-                            <span class="price">R$ 74,90</span>
-                        </div>
-                    </div>
-                    <a href="how-to-buy.html" class="buy-btn">Comprar</a>
                 </div>
 
-                <!-- Product 2: Anti-Addict_-->
-                <div class="game-product" style="--product-bg: url('../img/Antiaddict.png')">
-                    <div class="product-header">
-                        <h3>Anti-Addict</h3>
-                        <span class="product-type">Assinatura</span>
+                <!-- Addict -->
+                <div class="game-card">
+                    <div class="card-image">
+                        <img src="../img/Antiaddict.png" alt="Addict">
                     </div>
-                    <p class="product-description">Menu External Genshin Impact</p>
-                    <div class="product-options">
-                        <div class="option">
-                            <span class="duration">3 dias</span>
-                            <span class="price">R$ 14,90</span>
+                    <div class="card-info">
+                        <h3>Addict</h3>
+                        
+                        <div class="product-options-list">
+                            <div class="option-item">
+                                <span class="option-name">Addict 1D</span>
+                                <span class="option-price">R$ 9.60</span>
+                            </div>
+                            <div class="option-item">
+                                <span class="option-name">Addict 3D</span>
+                                <span class="option-price">R$ 14.90</span>
+                            </div>
+                            <div class="option-item">
+                                <span class="option-name">Addict 7D</span>
+                                <span class="option-price">R$ 24.90</span>
+                            </div>
+                            <div class="option-item">
+                                <span class="option-name">Addict 30D</span>
+                                <span class="option-price">R$ 62.90</span>
+                            </div>
                         </div>
-                        <div class="option">
-                            <span class="duration">7 dias</span>
-                            <span class="price">R$ 24,90</span>
-                        </div>
-                        <div class="option">
-                            <span class="duration">30 dias</span>
-                            <span class="price">R$ 62,90</span>
-                        </div>
-                    </div>
-                    <a href="how-to-buy.html" class="buy-btn">Comprar</a>
-                </div>
 
-                <!-- Product 3: Shika -->
-                <div class="game-product" style="--product-bg: url('../img/ShikaBeta.jpg')">
-                    <div class="product-header">
-                        <h3>Shika</h3>
-                        <span class="product-type">Permanente</span>
-                    </div>
-                    <p class="product-description">Menu Genshin Impact</p>
-                    <div class="product-options">
-                        <div class="option">
-                            <span class="duration">Shika Beta</span>
-                            <span class="price">R$ 30,00</span>
-                        </div>
-                        <div class="option">
-                            <span class="duration">Shika Alpha</span>
-                            <span class="price">R$ 350,00</span>
+                        <div class="card-meta" style="margin-top: 15px;">
+                            <span class="stock-status in-stock"><i class="fa-solid fa-circle"></i> Em Estoque</span>
                         </div>
                     </div>
-                    <a href="how-to-buy.html" class="buy-btn">Comprar</a>
                 </div>
-
-                <!-- Product 5: Slash Bypass -->
-                <div class="game-product" style="--product-bg: url('../img/SlashBypass.png')">
-                    <div class="product-header">
+                <!-- Slash -->
+                <div class="game-card">
+                    <div class="card-image">
+                        <img src="../img/SlashBypass.png" alt="Slash">
+                    </div>
+                    <div class="card-info">
                         <h3>Slash Bypass</h3>
-                        <span class="product-type">Assinatura</span>
+                        
+                        <div class="product-options-list">
+                            <div class="option-item">
+                                <span class="option-name">Slash 3D</span>
+                                <span class="option-price">R$ 12.90</span>
+                            </div>
+                            <div class="option-item">
+                                <span class="option-name">Slash 7D</span>
+                                <span class="option-price">R$ 32.90</span>
+                            </div>
+                            <div class="option-item">
+                                <span class="option-name">Slash 30D</span>
+                                <span class="option-price">R$ 53.90</span>
+                            </div>
+                        </div>
+
+                        <div class="card-meta" style="margin-top: 15px;">
+                            <span class="stock-status in-stock"><i class="fa-solid fa-circle"></i> Em Estoque</span>
+                        </div>
                     </div>
-                    <p class="product-description">Wuwa Menu + Genshin Bypass</p>
-                    <div class="product-options">
-                        <div class="option">
-                            <span class="duration">3 dias</span>
-                            <span class="price">R$ 21,90</span>
-                        </div>
-                        <div class="option">
-                            <span class="duration">7 dias</span>
-                            <span class="price">R$ 32,90</span>
-                        </div>
-                        <div class="option">
-                            <span class="duration">30 dias</span>
-                            <span class="price">R$ 53,90</span>
+                </div>
+                <!-- Shika -->
+                <div class="game-card">
+                    <div class="card-image">
+                        <img src="../img/ShikaAlpha.png" alt="Shika">
+                    </div>
+                    <div class="card-info">
+                        <h3>Shika Beta/Alpha</h3>
+                        
+                        <div class="product-options-list">
+                            <div class="option-item">
+                                <span class="option-name">Shika Beta (Lifetime)</span>
+                                <span class="option-price">R$ 30.00</span>
+                            </div>
+                            <div class="option-item">
+                                <span class="option-name">Shika Alpha (Lifetime)</span>
+                                <span class="option-price">R$ 350.00</span>
+                            </div>
+                        <div class="card-meta" style="margin-top: 15px;">
+                            <span class="stock-status in-stock"><i class="fa-solid fa-circle"></i> Em Estoque</span>
                         </div>
                     </div>
-                    <a href="how-to-buy.html" class="buy-btn">Comprar</a>
                 </div>
             </div>
         </div>
@@ -137,10 +159,17 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 NyxStore. Todos os direitos reservados.</p>
+        <div class="container footer-content" style="justify-content: center; text-align: center;">
+            <div class="footer-brand">
+                <a href="#" class="logo"><i class="fa-solid fa-moon"></i> Nyx Community</a>
+                <p>Sua loja confiável para Cheats seguros!</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nyx Community. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>
 </body>
-
 </html>
